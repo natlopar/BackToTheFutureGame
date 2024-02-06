@@ -21,9 +21,7 @@
   <body class="body">
     <section class="backSection scale-in-center"></section>
     <header class="header">
-      <!--     
-      <img class="header__titleImage"  src="/images/title.jpg" alt=""> -->
-
+      <img class="header__titleImage"  src="/images/Back_to_the_Future_film_series_logo.webp" alt="">
       <nav class="header__nav js-nav">
         <p class="header__nav--text">¿Cómo se juega?</p>
         <img
@@ -40,14 +38,18 @@
       </nav>
     </header>
     <main class="main">
+     
       <h1 class="main__title js-title">
         Elige un personaje e intenta viajar en el tiempo sin crear una paradoja
         espacio-temporal!!!
       </h1>
-      <button class="main__button js-play">Jugar</button>
+  
+
+      <a class="main__button js-play" href="./game.html">Jugar</a>
+    
       <!-- <img class="hero__img scale-in-center"  src="/images/title2.webp" alt="Imagen De Lorean"> -->
 
-      <section class="hidden gameSection js-startSection ">
+      <!-- <section class="hidden gameSection js-startSection">
         <div class="gameSectionPlay">
           <section class="characterSection js-hidden">
             <h2 class="characterSection__title">
@@ -55,81 +57,78 @@
             </h2>
             <div class="characterSection__container">
               <div class="js-traveller characterSection__characters">
-                <article class="characterSection__characters--each">
-                  <h3>Marty</h3>
-                  <img src="" alt="Imagen Marty" class="hidden" />
-                </article>
-                <article class="characterSection__characters--each">
-                  <h3>Doc</h3>
-                  <img src="" alt="Imagen Doc" class="hidden" />
-                </article>
-                <article class="characterSection__characters--each">
-                  <h3>Biff</h3>
-                  <img src="" alt="Imagen Biff" class="hidden" />
-                </article>
-                <article class="characterSection__characters--each">
-                  <h3>Jennifer</h3>
-                  <img src="" alt="Imagen Jennifer" class="hidden" />
-                </article>
+                <h3 class="characterSection__characters--each">Marty</h3>
+
+                <h3 class="characterSection__characters--each">Doc</h3>
+
+                <h3 class="characterSection__characters--each">Biff</h3>
+
+                <h3 class="characterSection__characters--each">Jennifer</h3>
+
+                <button class="js-startGame hidden">Empezar a jugar</button>
+                
+                <button class="js-resetGame hidden">Volver a empezar</button>
               </div>
-              <!-- <p class="js-character"></p> -->
-              <img src="" alt="Imagen personaje elegido" class="js-character characterSection__img" />
+              <img
+                src=""
+                alt="Imagen personaje elegido"
+                class="js-character characterSection__img hidden"
+              />
             </div>
           </section>
 
           <section class="diceSection js-hidden">
             <h2 class="diceSection__title">Ahora tira los dados!</h2>
 
-           
-              <article id="year" class="js-dice diceSection__dice">
-                <i class="fa-solid fa-dice">  </i>
-                <span class="diceSection__dice--text">Año</span>
-               
-                <p class="js-resultYear"></p>
-                <p class="js-year"></p>
-              </article>
-        
-            
-              <article id="place" class="js-dice diceSection__dice">
-                <i class="fa-solid fa-dice">  </i>
-                <span class="diceSection__dice--text">Lugar</span>
-                <p class="js-resultPlace"></p>
-                <p class="js-place"></p>
-              </article>
-       
-         
-              <article id="company" class="js-dice diceSection__dice">
-                <i class="fa-solid fa-dice">  </i>
-                <span class="diceSection__dice--text">Personaje al que te vas a encontrar</span>
-                <p class="js-resultCompany"></p>
-                <p class="js-company"></p>
-              </article>
+            <article id="year" class="js-dice diceSection__dice">
+              <i class="fa-solid fa-dice"> </i>
+              <span class="diceSection__dice--text">Año</span>
 
-        
-              <article id="complement" class="js-dice diceSection__dice">
-                <i class="fa-solid fa-dice">  </i>
-                <span class="diceSection__dice--text">Complemento</span>
-                <p class="js-resultComplement"></p>
-                <p class="js-complement"></p>
-              </article>
+              <p class="js-resultYear"></p>
+              <p class="js-year"></p>
+            </article>
 
+            <article id="place" class="js-dice diceSection__dice">
+              <i class="fa-solid fa-dice"> </i>
+              <span class="diceSection__dice--text">Lugar</span>
+              <p class="js-resultPlace"></p>
+              <p class="js-place"></p>
+            </article>
+
+            <article id="company" class="js-dice diceSection__dice">
+              <i class="fa-solid fa-dice"> </i>
+              <span class="diceSection__dice--text"
+                >Personaje al que te vas a encontrar</span
+              >
+              <p class="js-resultCompany"></p>
+              <p class="js-company"></p>
+            </article>
+
+            <article id="complement" class="js-dice diceSection__dice">
+              <i class="fa-solid fa-dice"> </i>
+              <span class="diceSection__dice--text">Complemento</span>
+              <p class="js-resultComplement"></p>
+              <p class="js-complement"></p>
+            </article>
           </section>
         </div>
         <div class="gameSectionCounter diceSection__counter">
           <div class="diceSection__counter--initial">
-            <img  class="diceSection__counter--initialImg" src="/images/condensador.jpg" alt="" />
-            <h2  class="diceSection__counter--initialText">Contador de tiradas</h2>
-        </div>
+            <img
+              class="diceSection__counter--initialImg"
+              src="/images/condensador.jpg"
+              alt=""
+            />
+            <h2 class="diceSection__counter--initialText">
+              Contador de tiradas
+            </h2>
+          </div>
           <div class="diceSection__counter--result">
             <img src="" alt="gif final" class="gif js-end hidden" />
             <p class="js-counter"></p>
           </div>
-          
-        
-         
-         
         </div>
-      </section>
+      </section> -->
     </main>
     <footer></footer>
     <script src="./js/main.js"></script>

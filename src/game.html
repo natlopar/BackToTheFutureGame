@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Back to the future</title>
+    <link rel="stylesheet" href="./scss/main.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@1,8..144,300;1,8..144,500;1,8..144,700&family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/40a2c402a8.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="body">
+    <section class="backSection scale-in-center start js-hidden hidden"></section>
+    <header class="header">
+      <img class="header__titleImage"  src="/images/Back_to_the_Future_film_series_logo.webp" alt="">
+      <nav class="header__nav js-nav">
+        <p class="header__nav--text">¿Cómo se juega?</p>
+        <img
+          class="header__nav--img bounce-top"
+          src="/images/matrícula.jpg"
+          alt=""
+        />
+        <p class="header__nav--hidden js-navText hidden">
+          Tienes un total de 7 tiradas de dados para intentar que tu viaje en el
+          tiempo no destruya la galaxia. Para eso, no puedes encontrarte con tu
+          otro tú , no puede aparecer un complemento incoherente con la fecha ni
+          un lugar que todavía no exista... Desafía a la línea temporal!!
+        </p>
+      </nav>
+    </header>
+    <main class="main">
+<!--      
+      <h1 class="main__title js-title">
+        Elige un personaje e intenta viajar en el tiempo sin crear una paradoja
+        espacio-temporal!!!
+      </h1>
+  
+
+      <button class="main__button js-play">Jugar</button> -->
+    
+      <!-- <img class="hero__img scale-in-center"  src="/images/title2.webp" alt="Imagen De Lorean"> -->
+
+      <section class="gameSection js-startSection">
+        <div class="gameSectionPlay">
+          <section class="characterSection">
+            <h2 class="characterSection__title">
+              Elige con qué personaje quieres viajar en el tiempo:
+            </h2>
+            <div class="characterSection__container">
+              <div class="js-traveller characterSection__characters">
+                <h3 class="characterSection__characters--each">Marty</h3>
+
+                <h3 class="characterSection__characters--each">Doc</h3>
+
+                <h3 class="characterSection__characters--each">Biff</h3>
+
+                <h3 class="characterSection__characters--each">Jennifer</h3>
+
+                <button class="js-startGame hidden">Empezar a jugar</button>
+                
+                <button class="js-resetGame hidden">Volver a empezar</button>
+              </div>
+              <img
+                src=""
+                alt="Imagen personaje elegido"
+                class="js-character characterSection__img hidden"
+              />
+            </div>
+          </section>
+
+          <section class="diceSection js-hidden">
+            <h2 class="diceSection__title">Ahora tira los dados!</h2>
+
+            <article id="year" class="js-dice diceSection__dice">
+              <i class="fa-solid fa-dice"> </i>
+              <span class="diceSection__dice--text">Año</span>
+
+              <p class="js-resultYear"></p>
+              <p class="js-year"></p>
+            </article>
+
+            <article id="place" class="js-dice diceSection__dice">
+              <i class="fa-solid fa-dice"> </i>
+              <span class="diceSection__dice--text">Lugar</span>
+              <p class="js-resultPlace"></p>
+              <p class="js-place"></p>
+            </article>
+
+            <article id="company" class="js-dice diceSection__dice">
+              <i class="fa-solid fa-dice"> </i>
+              <span class="diceSection__dice--text"
+                >Personaje al que te vas a encontrar</span
+              >
+              <p class="js-resultCompany"></p>
+              <p class="js-company"></p>
+            </article>
+
+            <article id="complement" class="js-dice diceSection__dice">
+              <i class="fa-solid fa-dice"> </i>
+              <span class="diceSection__dice--text">Complemento</span>
+              <p class="js-resultComplement"></p>
+              <p class="js-complement"></p>
+            </article>
+          </section>
+        </div>
+        <div class="gameSectionCounter diceSection__counter">
+          <div class="diceSection__counter--initial">
+            <img
+              class="diceSection__counter--initialImg"
+              src="/images/condensador.jpg"
+              alt=""
+            />
+            <h2 class="diceSection__counter--initialText">
+              Contador de tiradas
+            </h2>
+          </div>
+          <div class="diceSection__counter--result">
+            <img src="" alt="gif final" class="gif js-end hidden" />
+            <p class="js-counter"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
