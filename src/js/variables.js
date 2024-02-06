@@ -1,5 +1,5 @@
 const menu = document.querySelector('.js-nav');
-const hiddenPart = document.querySelectorAll('.js-hidden')
+const hiddenPart = document.querySelectorAll('.js-hidden');
 const menuText = document.querySelector('.js-navText');
 const dices = document.querySelectorAll('.js-dice');
 const counter = document.querySelector('.js-counter');

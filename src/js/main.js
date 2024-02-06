@@ -1,7 +1,6 @@
 'use strict';
 import './variables.js'; 
 import './characters.js';
-
 import './dices.js';
 import './reset.js'
 
@@ -12,7 +11,7 @@ const handlePlay =()=>{
   titleHidden.classList.add('hidden');
 
 }
-
+handlePlay();
 play.addEventListener('click',handlePlay);
 
 const handleStartGame=(e)=>{

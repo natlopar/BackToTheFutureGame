@@ -19,9 +19,13 @@
   </head>
 
   <body class="body">
-    <section class="backSection scale-in-center start js-hidden hidden"></section>
+    <section class="backSection scale-in-center"></section>
     <header class="header">
-      <img class="header__titleImage"  src="/images/Back_to_the_Future_film_series_logo.webp" alt="">
+      <img
+        class="header__titleImage"
+        src="/images/Back_to_the_Future_film_series_logo.webp"
+        alt=""
+      />
       <nav class="header__nav js-nav">
         <p class="header__nav--text">¿Cómo se juega?</p>
         <img
@@ -38,20 +42,17 @@
       </nav>
     </header>
     <main class="main">
-<!--      
       <h1 class="main__title js-title">
         Elige un personaje e intenta viajar en el tiempo sin crear una paradoja
         espacio-temporal!!!
       </h1>
-  
 
-      <button class="main__button js-play">Jugar</button> -->
-    
+      <a class="main__button js-play" href="./game.html">Jugar</a>
+          
       <!-- <img class="hero__img scale-in-center"  src="/images/title2.webp" alt="Imagen De Lorean"> -->
-
-      <section class="gameSection js-startSection">
+      <section class="hidden gameSection js-startSection">
         <div class="gameSectionPlay">
-          <section class="characterSection">
+          <section class="characterSection js-hidden">
             <h2 class="characterSection__title">
               Elige con qué personaje quieres viajar en el tiempo:
             </h2>
@@ -66,7 +67,7 @@
                 <h3 class="characterSection__characters--each">Jennifer</h3>
 
                 <button class="js-startGame hidden">Empezar a jugar</button>
-                
+
                 <button class="js-resetGame hidden">Volver a empezar</button>
               </div>
               <img
