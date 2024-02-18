@@ -9,6 +9,9 @@ const handleDice = (e) => {
       totalCounter = totalCounter -1;
       counter.innerHTML= `Te quedan ${totalCounter} tiradas`;
     } else {
+      for (const eachDice of dices) {
+        eachDice.removeEventListener('click', handleDice);
+      }
       counter.innerHTML= `Hay demasiadas paradojas temporales, has perdido... corre Marty!!!`;
       gifEnd.classList.remove('hidden');
       gifEnd.src = "/images/Doc1.gif";
