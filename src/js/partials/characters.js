@@ -29,6 +29,12 @@ const handleTraveller = (e) => {
 
   traveller.addEventListener('click', handleTraveller);
 
+    const handleStartGame=(e)=>{
+    e.preventDefault();
+    traveller.removeEventListener('click', handleTraveller);
+    btnStart.classList.toggle('selected');
   
+  }
+  btnStart.addEventListener('click', handleStartGame);
   
   

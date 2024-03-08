@@ -13,7 +13,7 @@ const resultCompany = document.querySelector('.js-resultCompany');
 const complement = document.querySelector('.js-complement');
 const resultComplement = document.querySelector('.js-resultComplement');
 const gifEnd = document.querySelector('.js-end');
-
+const titleHidden = document.querySelector('.js-title');
 
 
 const btnStart = document.querySelector(".js-startGame");

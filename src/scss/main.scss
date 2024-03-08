@@ -58,10 +58,11 @@
    
     }
     &--hidden {
-      position: absolute;
+      position: relative;
+      bottom: 350px;
       width: 75vw;
       font-size: 2rem;
-     z-index: 5;
+      z-index: 5;
       font-weight: bold;
       margin-top: 100px;
       background-color: black;
@@ -112,14 +113,18 @@
   }
   &__button {
     position: absolute;
-    top: 400px;
+    top: 380px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     text-decoration: none;
     background-color: black;
     color: white;
     padding: 10px;
     border-radius: 5px;
+    z-index: 1;
+    @media (min-width: 768px) {
+      font-size: 3rem;
+    }
     &:hover {
       background-color: #e3491a;
       transform: scale(1.1);
@@ -296,13 +301,16 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  
+  margin-top: 200px;
   justify-content: center;
   align-items: center;
+  @media (min-width: 768px) {
+    margin-top: 75px;
+   }
+
   &__img{
     width: 75vw;
     @media (min-width: 768px) {
-        
       width: 50vw;
      }
 
