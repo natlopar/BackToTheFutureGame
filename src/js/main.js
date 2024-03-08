@@ -4,6 +4,7 @@ import './characters.js';
 import './dices.js';
 import './reset.js'
 
+console.log(totalCounter)
 const handlePlay =()=>{
   play.classList.add('hidden');
   startSection.classList.remove('hidden');
