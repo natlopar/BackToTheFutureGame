@@ -121,6 +121,7 @@ const handleDice = (e) => {
           if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Herrería de Doc') && (currentCompany === 'Doc' || currentCompany === 'Perro Rabioso Tannen' || currentCompany === 'Clara') && (currentComplement === 'Tren del tiempo' || currentComplement === 'Caballo de Doc')){
            
             counter.innerHTML= '¡¡¡Has ganado, qué fuerte!!!';
+            counter.classList.remove('hidden');
             gifEnd.classList.remove('hidden');
              gifEnd.src = "./images/200.gif";
              final = 'win';
@@ -130,6 +131,7 @@ const handleDice = (e) => {
         } else if (currentYear === '1985') {
           if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería')   && (currentCompany === 'Doc' || currentCompany === 'Biff' || currentCompany === 'Jennifer' || currentCompany === 'George y Lorraine') && (currentComplement === 'Einstein' || currentComplement === 'Plutonio'|| currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
             counter.innerHTML= '¡¡¡Has ganado, qué fuerte!!!';
+            counter.classList.remove('hidden');
             gifEnd.classList.remove('hidden');
              gifEnd.src = "./images/200.gif";
              final = 'win';
@@ -138,6 +140,7 @@ const handleDice = (e) => {
         } else if (currentYear === '1955') {
           if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería'  || currentPlace === 'Baile del Encantamiento Bajo el Mar')   && (currentCompany === 'Doc' || currentCompany === 'Biff' || currentCompany === 'George y Lorraine') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
             counter.innerHTML= '¡¡¡Has ganado, qué fuerte!!!';
+            counter.classList.remove('hidden');
             gifEnd.classList.remove('hidden');
              gifEnd.src = "./images/200.gif";
              final = 'win';
@@ -146,6 +149,7 @@ const handleDice = (e) => {
         } else if (currentYear === '2015') {
           if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Hotel Biff`s' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería' )   && (currentCompany === 'Doc' || currentCompany === 'Biff' || currentCompany === 'Jennifer' || currentCompany === 'George y Lorraine') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación' || currentComplement === 'Chaleco con autosecado' || currentComplement === 'Patinete volador' || currentComplement === 'Plutonio' || currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
             counter.innerHTML= '¡¡¡Has ganado, qué fuerte!!!';
+            counter.classList.remove('hidden');
             gifEnd.classList.remove('hidden');
              gifEnd.src = "./images/200.gif";
              final = 'win';
@@ -155,9 +159,10 @@ const handleDice = (e) => {
     } else if (currentCharacter === 'Doc'){
       if(currentYear === '1885'){
         if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Herrería de Doc') && (currentCompany === 'Clara' || currentCompany === 'Perro Rabioso Tannen') && (currentComplement === 'Tren del tiempo' || currentComplement === 'Caballo de Doc')){
-          console.log ('Has ganado, qué fuerte!!!')
           counter.innerHTML= '¡¡¡Has ganado, qué fuerte!!!';
+          counter.classList.remove('hidden');
           gifEnd.classList.remove('hidden');
+          counter.classList.remove('hidden');
            gifEnd.src = "./images/200.gif";
            final = 'win';
            disabled();
@@ -165,6 +170,7 @@ const handleDice = (e) => {
       } else if (currentYear === '1985') {
         if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería')   && (currentCompany === 'Marty' || currentCompany === 'Biff' || currentCompany === 'Jennifer' || currentCompany === 'George y Lorraine') && (currentComplement === 'Einstein' || currentComplement === 'Plutonio'|| currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
           counter.innerHTML= '¡¡¡Has ganado, qué fuerte!!!';
+          counter.classList.remove('hidden');
           gifEnd.classList.remove('hidden');
            gifEnd.src = "./images/200.gif";
            final = 'win';
@@ -173,6 +179,7 @@ const handleDice = (e) => {
       } else if (currentYear === '1955') {
         if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería' || currentPlace === 'Baile del Encantamiento Bajo el Mar')   && (currentCompany === 'Biff' || currentCompany === 'George y Lorraine') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
           counter.innerHTML= '¡¡¡Has ganado, qué fuerte!!!';
+          counter.classList.remove('hidden');
           gifEnd.classList.remove('hidden');
            gifEnd.src = "./images/200.gif";
            final = 'win';
@@ -181,6 +188,7 @@ const handleDice = (e) => {
       } else if (currentYear === '2015') {
         if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Hotel Biff`s' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería' )   && (currentCompany === 'Marty' || currentCompany === 'Biff' || currentCompany === 'Jennifer' || currentCompany === 'George y Lorraine') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación' || currentComplement === 'Chaleco con autosecado' || currentComplement === 'Patinete volador' || currentComplement === 'Plutonio' || currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
           counter.innerHTML= '¡¡¡Has ganado, qué fuerte!!!';
+          counter.classList.remove('hidden');
           gifEnd.classList.remove('hidden');
            gifEnd.src = "./images/200.gif";
            final = 'win';
@@ -192,7 +200,8 @@ const handleDice = (e) => {
 
       if(currentYear === '1885'){
         if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Herrería de Doc') && (currentCompany === 'Clara' || currentCompany === 'Doc'|| currentCompany === 'Perro Rabioso Tannen') && (currentComplement === 'Tren del tiempo' || currentComplement === 'Caballo de Doc')){
-          console.log ('Has ganado, qué fuerte!!!')
+     
+          counter.classList.remove('hidden');
           counter.innerHTML= '¡¡¡Has ganado, qué fuerte!!!';
           gifEnd.classList.remove('hidden');
            gifEnd.src = "./images/200.gif";
@@ -201,6 +210,7 @@ const handleDice = (e) => {
         } 
       } else if (currentYear === '1985') {
         if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería')   && (currentCompany === 'Marty' || currentCompany === 'Doc' || currentCompany === 'Jennifer' || currentCompany === 'George y Lorraine') && (currentComplement === 'Einstein' || currentComplement === 'Plutonio'|| currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
+          counter.classList.remove('hidden');
           counter.innerHTML= '¡¡¡Has ganado, qué fuerte!!!';
           gifEnd.classList.remove('hidden');
            gifEnd.src = "./images/200.gif";
@@ -210,6 +220,7 @@ const handleDice = (e) => {
       } else if (currentYear === '1955') {
         if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería' || currentPlace === 'Baile del Encantamiento Bajo el Mar')   && (currentCompany === 'Doc' || currentCompany === 'George y Lorraine') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
           counter.innerHTML= '¡¡¡Has ganado, qué fuerte!!!';
+          counter.classList.remove('hidden');
           gifEnd.classList.remove('hidden');
            gifEnd.src = "./images/200.gif";
            final = 'win';
@@ -218,6 +229,7 @@ const handleDice = (e) => {
       } else if (currentYear === '2015') {
         if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Hotel Biff`s' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería' )   && (currentCompany === 'Marty' || currentCompany === 'Doc' || currentCompany === 'Jennifer' || currentCompany === 'George y Lorraine') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación' || currentComplement === 'Chaleco con autosecado' || currentComplement === 'Patinete volador' || currentComplement === 'Plutonio' || currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
           counter.innerHTML= '¡¡¡Has ganado, qué fuerte!!!';
+          counter.classList.remove('hidden');
           gifEnd.classList.remove('hidden');
            gifEnd.src = "./images/200.gif";
            final = 'win';
@@ -227,8 +239,9 @@ const handleDice = (e) => {
     } else if (currentCharacter === 'Jennifer') {
       if(currentYear === '1885'){
         if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Herrería de Doc') && (currentCompany === 'Clara' || currentCompany === 'Doc' || currentCompany === 'Perro Rabioso Tannen') && (currentComplement === 'Tren del tiempo' || currentComplement === 'Caballo de Doc')){
-          console.log ('Has ganado, qué fuerte!!!')
+         
           counter.innerHTML= '¡¡¡Has ganado, qué fuerte!!!';
+          counter.classList.remove('hidden');
           gifEnd.classList.remove('hidden');
            gifEnd.src = "./images/200.gif";
            final = 'win';
@@ -236,6 +249,7 @@ const handleDice = (e) => {
         } 
       } else if (currentYear === '1985') {
         if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería')   && (currentCompany === 'Marty' || currentCompany === 'Doc' || currentCompany === 'Biff' || currentCompany === 'George y Lorraine') && (currentComplement === 'Einstein' || currentComplement === 'Plutonio'|| currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
+          counter.classList.remove('hidden');
           counter.innerHTML= '¡¡¡Has ganado, qué fuerte!!!';
           gifEnd.classList.remove('hidden');
            gifEnd.src = "./images/200.gif";
@@ -245,6 +259,7 @@ const handleDice = (e) => {
       } else if (currentYear === '1955') {
         if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería' || currentPlace === 'Baile del Encantamiento Bajo el Mar')   && (currentCompany === 'Doc' || currentCompany === 'George y Lorraine' || currentCompany === 'Biff') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
           counter.innerHTML= '¡¡¡Has ganado, qué fuerte!!!';
+          counter.classList.remove('hidden');
           gifEnd.classList.remove('hidden');
            gifEnd.src = "./images/200.gif";
            final = 'win';
@@ -253,6 +268,7 @@ const handleDice = (e) => {
       } else if (currentYear === '2015') {
         if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Hotel Biff`s' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería' )   && (currentCompany === 'Marty' || currentCompany === 'Doc' || currentCompany === 'Biff' || currentCompany === 'George y Lorraine') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación' || currentComplement === 'Chaleco con autosecado' || currentComplement === 'Patinete volador' || currentComplement === 'Plutonio' || currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
           counter.innerHTML= '¡¡¡Has ganado, qué fuerte!!!';
+          counter.classList.remove('hidden');
           final = 'win';
           disabled();
           gifEnd.classList.remove('hidden');
@@ -268,6 +284,7 @@ const handleDice = (e) => {
       for (const eachDice of dices) {
         eachDice.removeEventListener('click', handleDice);    //revisar esto
       }
+      counter.classList.remove('hidden');
       counter.innerHTML= `Hay demasiadas paradojas temporales, has perdido... corre Marty!!!`;
       gifEnd.classList.remove('hidden');
       gifEnd.src = "./images/Doc1.gif";

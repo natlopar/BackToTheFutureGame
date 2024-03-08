@@ -22,6 +22,7 @@ const handleReset = (e) => {
   place.classList.add('hidden');
   company.classList.add('hidden');
   complement.classList.add('hidden');
+  gifEnd.classList.add('hidden');
 };
 
 btnReset.addEventListener('click', handleReset);
