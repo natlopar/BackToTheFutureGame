@@ -6,18 +6,21 @@ const handleTraveller = (e) => {
     btnStart.classList.remove('hidden');
 
     if (characterPlayer === "Marty"){
-      character.src = '/images/Marty15.jpeg' //personaje elegido para viajar
+      character.src = Marty; //personaje elegido para viajar
+      currentCharacter = 'Marty';
     } else if (characterPlayer === "Doc"){
-      character.src = '/images/Doc.jpeg'
+      character.src = Doc;
+      currentCharacter = 'Doc';
     } else if (characterPlayer === "Biff"){
-      character.src = '/images/biff.jpg'
+      character.src = Biff;
+      currentCharacter = 'Biff';
     } else if (characterPlayer === "Jennifer"){
-      character.src = '/images/Jennifer_Parker.webp'
+      currentCharacter = 'Jennifer';
+      character.src = Jennifer;
     } 
   
   };
   
   traveller.addEventListener('click', handleTraveller);
-  
   
   

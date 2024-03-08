@@ -20,7 +20,7 @@
 
   <body class="body">
     <section class="backSection scale-in-center"></section>
-    <load src="./partials/headerGame.html"/>
+    <load src="./partials/headerGame.html" />
     <main class="main">
       <h1 class="main__title js-title">
         Elige un personaje e intenta viajar en el tiempo sin crear una paradoja
@@ -28,13 +28,13 @@
       </h1>
 
       <a class="main__button js-play" href="./game.html">Jugar</a>
-          
+
       <!-- <img class="hero__img scale-in-center"  src="/images/title2.webp" alt="Imagen De Lorean"> -->
       <section class="hidden gameSection js-startSection">
         <div class="gameSectionPlay">
           <section class="characterSection js-hidden">
             <h2 class="characterSection__title">
-              Elige con qué personaje quieres viajar en el tiempo:
+              1. Elige con qué personaje quieres viajar en el tiempo:
             </h2>
             <div class="characterSection__container">
               <div class="js-traveller characterSection__characters">
@@ -46,9 +46,11 @@
 
                 <h3 class="characterSection__characters--each">Jennifer</h3>
 
-                <button class="js-startGame hidden">Empezar a jugar</button>
-
-                <button class="js-resetGame hidden">Volver a empezar</button>
+                <button
+                  class="characterSection__characters--btn js-startGame hidden"
+                >
+                  Empezar a jugar
+                </button>
               </div>
               <img
                 src=""
@@ -59,21 +61,21 @@
           </section>
 
           <section class="diceSection js-hidden">
-            <h2 class="diceSection__title">Ahora tira los dados!</h2>
+            <h2 class="diceSection__title">2. ¡Ahora tira los dados!</h2>
 
             <article id="year" class="js-dice diceSection__dice">
               <i class="fa-solid fa-dice"> </i>
               <span class="diceSection__dice--text">Año</span>
 
-              <p class="js-resultYear"></p>
-              <p class="js-year"></p>
+              <p class="js-resultYear hidden"></p>
+              <p class="js-year diceSection__dice--result"></p>
             </article>
 
             <article id="place" class="js-dice diceSection__dice">
               <i class="fa-solid fa-dice"> </i>
               <span class="diceSection__dice--text">Lugar</span>
-              <p class="js-resultPlace"></p>
-              <p class="js-place"></p>
+              <p class="js-resultPlace hidden"></p>
+              <p class="js-place diceSection__dice--result"></p>
             </article>
 
             <article id="company" class="js-dice diceSection__dice">
@@ -81,28 +83,37 @@
               <span class="diceSection__dice--text"
                 >Personaje al que te vas a encontrar</span
               >
-              <p class="js-resultCompany"></p>
-              <p class="js-company"></p>
+              <p class="js-resultCompany hidden"></p>
+              <p class="js-company diceSection__dice--result"></p>
             </article>
 
             <article id="complement" class="js-dice diceSection__dice">
               <i class="fa-solid fa-dice"> </i>
               <span class="diceSection__dice--text">Complemento</span>
-              <p class="js-resultComplement"></p>
-              <p class="js-complement"></p>
+              <p class="js-resultComplement hidden"></p>
+              <p class="js-complement diceSection__dice--result"></p>
             </article>
           </section>
         </div>
         <div class="gameSectionCounter diceSection__counter">
           <div class="diceSection__counter--initial">
-            <img
-              class="diceSection__counter--initialImg"
-              src="/images/condensador.jpg"
-              alt=""
-            />
             <h2 class="diceSection__counter--initialText">
-              Contador de tiradas
+              3. Contador de tiradas
             </h2>
+            <section>
+            <div>
+              <img
+                class="diceSection__counter--initialImg"
+                src="/images/condensador.jpg"
+                alt=""
+              />
+              <button
+                class="characterSection__characters--btnReset js-resetGame hidden"
+              >
+                Volver a empezar
+              </button>
+            </div>
+          </section>
           </div>
           <div class="diceSection__counter--result">
             <img src="" alt="gif final" class="gif js-end hidden" />
@@ -111,6 +122,7 @@
         </div>
       </section>
     </main>
+
     <footer></footer>
     <script src="./js/main.js"></script>
   </body>

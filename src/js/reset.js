@@ -5,13 +5,18 @@ const handleReset = (e) => {
   for (const eachDice of dices) {
     eachDice.addEventListener('click', handleDice);
   }
-  counter.innerHTML = `Te quedan ${totalCounter} tiradas`;
+  counter.innerHTML = ``;
   totalCounter = 7;
   gifEnd.classList.add('hidden');
   year.innerHTML = '';
   place.innerHTML = '';
   company.innerHTML = '';
   complement.innerHTML = '';
+  currentCharacter ='';
+  currentCompany = '';
+  currentComplement = '';
+  currentPlace= '';
+  currentYear = '';
 };
 
 btnReset.addEventListener('click', handleReset);
