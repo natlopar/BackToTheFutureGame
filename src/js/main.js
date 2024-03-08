@@ -1,9 +1,14 @@
 'use strict';
-import './variables.js'; 
-import './characters.js';
-import './dices.js';
-import './reset.js';
-import './landing.js';
+import './partials/variables.js'; 
+// import './landing.js';
+import './partials/characters.js';
+import './partials/dices.js';
+import './partials/reset.js';
+
+
+
+
+
 
 console.log(totalCounter)
 const handlePlay =()=>{

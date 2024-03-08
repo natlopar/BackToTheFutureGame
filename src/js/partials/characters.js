@@ -25,6 +25,10 @@ const handleTraveller = (e) => {
   
   };
   
+
+
   traveller.addEventListener('click', handleTraveller);
+
+  
   
   
