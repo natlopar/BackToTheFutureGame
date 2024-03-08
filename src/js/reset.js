@@ -17,6 +17,7 @@ const handleReset = (e) => {
   currentComplement = '';
   currentPlace= '';
   currentYear = '';
+  final = '';
 };
 
 btnReset.addEventListener('click', handleReset);

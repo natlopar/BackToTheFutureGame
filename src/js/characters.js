@@ -4,6 +4,10 @@ const handleTraveller = (e) => {
     character.classList.remove('hidden');
     btnReset.classList.remove('hidden');
     btnStart.classList.remove('hidden');
+    for (const eachDice of dices) {
+      eachDice.addEventListener('click', handleDice);
+    }
+    
 
     if (characterPlayer === "Marty"){
       character.src = Marty; //personaje elegido para viajar

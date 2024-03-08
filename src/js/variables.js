@@ -29,3 +29,4 @@ let currentPlace ='';
 let currentCompany ='';
 let currentComplement ='';
 let totalCounter = 7;
+let final = '';
