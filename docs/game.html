@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Back to the future</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@1,8..144,300;1,8..144,500;1,8..144,700&family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/40a2c402a8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./assets/main-83d12115.css">
+  </head>
+
+  <body class="body">
+    <section class="backSection scale-in-center"></section>
+    <header class="headerGame" id="header">
+    <a href="/index.html">
+      <img
+      class="headerGame__titleImage"
+      src="./images/Back_to_the_Future_film_series_logo.webp"
+      alt="logo Back to the Future"
+    />
+    </a>
+    <nav class="headerGame__nav ">
+      <p class="headerGame__nav--text js-nav">¿Cómo se juega?</p>
+      <a href="#time" class="headerGame__nav--text">Consulta la línea temporal</a>
+      <img
+        class="headerGame__nav--img bounce-top"
+        src="./images/matrícula.jpg"
+        alt=""
+      />
+      <ul class="headerGame__nav--hidden js-navText hidden">
+        <li>Elige con quién vas a viajar en el Delorean</li> 
+        <li>Selecciona "Empezar a Jugar"</li>
+        <li>Tira los dados haciendo click en cada uno</li>
+        <li>Tienes 7 tiradas en total para intentar que tu viaje en el
+          tiempo no destruya la galaxia</li>
+        <li>no puedes encontrarte con tu
+          otro tú , no puede aparecer un complemento incoherente con la fecha ni
+          un lugar que todavía no exista... </li>
+        <li>Desafía a la línea temporal!!</li>
+      </ul>
+    </nav>
+  </header>
+    <main class="main">
+      <h1 class="main__title js-title">
+        Elige un personaje e intenta viajar en el tiempo sin crear una paradoja
+        espacio-temporal!!!
+      </h1>
+
+      <a class="main__button js-play" href="./game.html">Jugar</a>
+
+      <!-- <img class="hero__img scale-in-center"  src="/images/title2.webp" alt="Imagen De Lorean"> -->
+      <section class="hidden gameSection js-startSection">
+        <div class="gameSectionPlay">
+          <section class="characterSection js-hidden">
+            <h2 class="characterSection__title">
+              1. Elige con qué personaje quieres viajar en el tiempo:
+            </h2>
+            <div class="characterSection__container">
+              <div class="js-traveller characterSection__characters">
+                <h3 class="characterSection__characters--each">Marty</h3>
+
+                <h3 class="characterSection__characters--each">Doc</h3>
+
+                <h3 class="characterSection__characters--each">Biff</h3>
+
+                <h3 class="characterSection__characters--each">Jennifer</h3>
+
+                <button
+                  class="characterSection__characters--btn js-startGame hidden"
+                >
+                  Empezar a jugar
+                </button>
+              </div>
+              <img
+                src=""
+                alt="Imagen personaje elegido"
+                class="js-character characterSection__img hidden"
+              />
+            </div>
+          </section>
+
+          <section class="diceSection js-hidden">
+            <h2 class="diceSection__title">2. ¡Ahora tira los dados!</h2>
+
+            <article id="year" class="js-dice diceSection__dice">
+              <i class="fa-solid fa-dice"> </i>
+              <span class="diceSection__dice--text">Año</span>
+
+              <p class="js-resultYear hidden"></p>
+              <p class="js-year diceSection__dice--result"></p>
+            </article>
+
+            <article id="place" class="js-dice diceSection__dice">
+              <i class="fa-solid fa-dice"> </i>
+              <span class="diceSection__dice--text">Lugar</span>
+              <p class="js-resultPlace hidden"></p>
+              <p class="js-place diceSection__dice--result"></p>
+            </article>
+
+            <article id="company" class="js-dice diceSection__dice">
+              <i class="fa-solid fa-dice"> </i>
+              <span class="diceSection__dice--text"
+                >Personaje al que te vas a encontrar</span
+              >
+              <p class="js-resultCompany hidden"></p>
+              <p class="js-company diceSection__dice--result"></p>
+            </article>
+
+            <article id="complement" class="js-dice diceSection__dice">
+              <i class="fa-solid fa-dice"> </i>
+              <span class="diceSection__dice--text">Complemento</span>
+              <p class="js-resultComplement hidden"></p>
+              <p class="js-complement diceSection__dice--result"></p>
+            </article>
+          </section>
+        </div>
+        <div class="gameSectionCounter diceSection__counter">
+          <div class="diceSection__counter--initial">
+            <h2 class="diceSection__counter--initialText">
+              3. Contador de tiradas
+            </h2>
+            <button
+            class="characterSection__characters--btnReset js-resetGame hidden"
+          >
+            Volver a empezar
+          </button>
+            <section>
+            <div>
+              <img
+                class="diceSection__counter--initialImg"
+                src="./images/condensador.jpg"
+                alt=""
+              />
+            
+            </div>
+          </section>
+          </div>
+          <div class="diceSection__counter--result">
+            <img src="gif final" alt="gif final" class="gif js-end hidden" />
+            <p class="js-counter " ></p>
+          </div>
+        </div>
+      </section>
+      <section class="timeline">
+        <a href="#header" class="timeline__btn"><i class="fa-solid fa-circle-arrow-up"></i></a>
+        <figure id="time" >
+          <img src="./images/BTTFTimelines.png" class="timeline__img" alt="imagen linea temporal">
+        </figure>
+    
+      </section>
+    </main>
+
+    <footer></footer>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
