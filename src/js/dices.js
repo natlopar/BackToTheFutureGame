@@ -132,7 +132,7 @@ const handleDice = (e) => {
              disabled();
           }
         } else if (currentYear === '1955') {
-          if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería')   && (currentCompany === 'Doc' || currentCompany === 'Biff' || currentCompany === 'George y Lorraine') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
+          if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería'  || currentPlace === 'Baile del Encantamiento Bajo el Mar')   && (currentCompany === 'Doc' || currentCompany === 'Biff' || currentCompany === 'George y Lorraine') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
             counter.innerHTML= '¡¡¡Has ganado, qué fuerte!!!';
             gifEnd.classList.remove('hidden');
              gifEnd.src = "/images/200.gif";
@@ -167,7 +167,7 @@ const handleDice = (e) => {
            disabled();
         }
       } else if (currentYear === '1955') {
-        if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería')   && (currentCompany === 'Biff' || currentCompany === 'George y Lorraine') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
+        if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería' || currentPlace === 'Baile del Encantamiento Bajo el Mar')   && (currentCompany === 'Biff' || currentCompany === 'George y Lorraine') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
           counter.innerHTML= '¡¡¡Has ganado, qué fuerte!!!';
           gifEnd.classList.remove('hidden');
            gifEnd.src = "/images/200.gif";
@@ -204,7 +204,7 @@ const handleDice = (e) => {
            disabled();
         }
       } else if (currentYear === '1955') {
-        if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería')   && (currentCompany === 'Doc' || currentCompany === 'George y Lorraine') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
+        if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería' || currentPlace === 'Baile del Encantamiento Bajo el Mar')   && (currentCompany === 'Doc' || currentCompany === 'George y Lorraine') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
           counter.innerHTML= '¡¡¡Has ganado, qué fuerte!!!';
           gifEnd.classList.remove('hidden');
            gifEnd.src = "/images/200.gif";
@@ -239,7 +239,7 @@ const handleDice = (e) => {
            disabled();
         }
       } else if (currentYear === '1955') {
-        if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería')   && (currentCompany === 'Doc' || currentCompany === 'George y Lorraine' || currentCompany === 'Biff') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
+        if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería' || currentPlace === 'Baile del Encantamiento Bajo el Mar')   && (currentCompany === 'Doc' || currentCompany === 'George y Lorraine' || currentCompany === 'Biff') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
           counter.innerHTML= '¡¡¡Has ganado, qué fuerte!!!';
           gifEnd.classList.remove('hidden');
            gifEnd.src = "/images/200.gif";
