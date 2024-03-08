@@ -1,26 +1,29 @@
-const titleHidden = document.querySelector('.js-title');
-const menu = document.querySelector('.js-nav');
-const menuText = document.querySelector('.js-navText');
-const hiddenPart = document.querySelectorAll('.js-hidden');
-const play = document.querySelector('.js-play');
-const startSection =document.querySelector('.js-startSection');
+const titleHiddenA = document.querySelector('.js-title');
+const menuA = document.querySelector('.js-nav');
+const menuTextA = document.querySelector('.js-navText');
+const hiddenPartA = document.querySelectorAll('.js-hidden');
+const playA = document.querySelector('.js-play');
+const startSectionA =document.querySelector('.js-startSection');
 
-const handleMenu =()=>{
-    menuText.classList.toggle('hidden'); 
-    titleHidden.classList.add('hidden');
-    for (const hidden of hiddenPart){
+const handleMenuA =()=>{
+    menuTextA.classList.toggle('hidden'); 
+    titleHiddenA.classList.add('hidden');
+    
+    playA.classList.toggle('hidden');
+
+    for (const hidden of hiddenPartA){
      hidden.classList.toggle('hidden');
     }
    }
    
-   menu.addEventListener('click', handleMenu);
+   menuA.addEventListener('click', handleMenuA);
    
-   const handlePlay =()=>{
-    play.classList.add('hidden');
-    startSection.classList.remove('hidden');
-    startSection.classList.add('start');
-    titleHidden.classList.add('hidden');
+   const handlePlayA =()=>{
+    playA.classList.add('hidden');
+    startSectionA.classList.remove('hidden');
+    startSectionA.classList.add('start');
+    titleHiddenA.classList.add('hidden');
   
   }
   
-  play.addEventListener('click',handlePlay);
+  playA.addEventListener('click',handlePlayA);

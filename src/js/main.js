@@ -2,7 +2,8 @@
 import './variables.js'; 
 import './characters.js';
 import './dices.js';
-import './reset.js'
+import './reset.js';
+import './landing.js';
 
 console.log(totalCounter)
 const handlePlay =()=>{
@@ -34,3 +35,9 @@ const handleMenu =()=>{
 menu.addEventListener('click', handleMenu);
 
 
+const handleInstructions =()=>{
+  menuText.classList.toggle('hidden');
+}
+
+
+menuText.addEventListener('click', handleInstructions);

@@ -106,7 +106,7 @@ const handleDice = (e) => {
 
 
   const win = () =>{
-    console.log(totalCounter)
+ 
       
     if (totalCounter > 0){
      
@@ -115,7 +115,7 @@ const handleDice = (e) => {
       if (currentCharacter === 'Marty'){
         if(currentYear === '1885'){
           if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Herrería de Doc') && (currentCompany === 'Doc' || currentCompany === 'Perro Rabioso Tannen' || currentCompany === 'Clara') && (currentComplement === 'Tren del tiempo' || currentComplement === 'Caballo de Doc')){
-            console.log ('Has ganado, qué fuerte!!!')
+           
             counter.innerHTML= '¡¡¡Has ganado, qué fuerte!!!';
             gifEnd.classList.remove('hidden');
              gifEnd.src = "./images/200.gif";
