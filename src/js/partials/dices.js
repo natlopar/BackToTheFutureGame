@@ -8,6 +8,7 @@ const handleDice = (e) => {
 
     if (idDice.includes('year')) {
       let dice = Math.floor(Math.random() * 4) + 1;
+      year.classList.remove('hidden');
       resultYear.innerHTML= dice;
       if (dice === 1) {
         year.innerHTML = '1885';
@@ -24,6 +25,7 @@ const handleDice = (e) => {
       }
     } else if (idDice.includes('place')){
       let dice = getRandomNumber();
+      place.classList.remove('hidden');
       resultPlace.innerHTML = dice;
       if (dice === 1) {
           place.innerHTML = 'Reloj de la Torre';
@@ -46,6 +48,7 @@ const handleDice = (e) => {
         }
     } else if (idDice.includes('company')){
       let dice = Math.floor(Math.random() * 7) + 1;
+      company.classList.remove('hidden');
       resultCompany.innerHTML = dice;
       if (dice === 1) {
           company.innerHTML = 'Marty';
@@ -71,6 +74,7 @@ const handleDice = (e) => {
         }
     } else if (idDice.includes('complement')){
       let dice = Math.floor(Math.random() * 8) + 1;
+      complement.classList.remove('hidden');
       resultComplement.innerHTML = dice;
       if (dice === 1) {
           complement.innerHTML = 'Chaleco con autosecado';

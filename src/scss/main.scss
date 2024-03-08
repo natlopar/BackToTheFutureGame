@@ -1,18 +1,8 @@
 @import 'core/variables';
 @import 'core/reset';
-// // @import 'components/code';
-// @import 'components/links';
-// @import 'layout/page';
-@import 'layout/headerGame';
-// @import 'layout/hero';
-// @import 'layout/footer';
-// @import 'pages/index';
 
-// .body {
-//   position: relative;
-//   width: 100%;
-//   height: 100%;
-// }
+@import 'layout/headerGame';
+
 .body{
   height: 100vh;
 }
@@ -20,11 +10,6 @@
   display: none;
 }
 
-// .body {
-//   display: flex;
-//   flex-direction: column;
-//   gap: 100px;
-// }
 .start {
   position: absolute;
   top: 20vh;
@@ -254,6 +239,8 @@
   }
   &--result {
     font-size: 1.7rem;
+    background-color: white;
+    padding: 5px;
 
 
   }
@@ -278,6 +265,7 @@
     &--result{
       p{
         font-size: 1.75rem;
+        padding: 5px;
         text-align: center;
         color: #e3491a;
         background-color: white;

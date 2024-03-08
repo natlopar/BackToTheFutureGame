@@ -13,14 +13,14 @@ const handleMenu =()=>{
     }
    }
    
-   menu.addEventListener('click', handleMenu);
+menu.addEventListener('click', handleMenu);
    
-   const handlePlay =()=>{
-    play.classList.add('hidden');
-    startSection.classList.remove('hidden');
-    startSection.classList.add('start');
-    titleHidden.classList.add('hidden');
+//    const handlePlay =()=>{
+//     play.classList.add('hidden');
+//     // startSection.classList.remove('hidden');
+//     // startSection.classList.add('start');
+//     titleHidden.classList.add('hidden');
   
-  }
+//   }
   
-  play.addEventListener('click',handlePlay);
+// play.addEventListener('click', handlePlay);

@@ -1,6 +1,5 @@
-const menu = document.querySelector('.js-nav');
-const hiddenPart = document.querySelectorAll('.js-hidden');
-const menuText = document.querySelector('.js-navText');
+
+
 const dices = document.querySelectorAll('.js-dice');
 const counter = document.querySelector('.js-counter');
 const traveller = document.querySelector('.js-traveller');
@@ -14,9 +13,9 @@ const resultCompany = document.querySelector('.js-resultCompany');
 const complement = document.querySelector('.js-complement');
 const resultComplement = document.querySelector('.js-resultComplement');
 const gifEnd = document.querySelector('.js-end');
-const play = document.querySelector('.js-play');
-const startSection =document.querySelector('.js-startSection');
-const titleHidden = document.querySelector('.js-title');
+
+
+
 const btnStart = document.querySelector(".js-startGame");
 const btnReset = document.querySelector(".js-resetGame");
 const Marty = './images/Marty15.jpeg';

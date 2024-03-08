@@ -18,6 +18,10 @@ const handleReset = (e) => {
   currentPlace= '';
   currentYear = '';
   final = '';
+  year.classList.add('hidden');
+  place.classList.add('hidden');
+  company.classList.add('hidden');
+  complement.classList.add('hidden');
 };
 
 btnReset.addEventListener('click', handleReset);
