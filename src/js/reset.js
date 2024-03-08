@@ -1,6 +1,6 @@
 const handleReset = (e) => {
   e.preventDefault();
-  character.src = './/Delorean.gif';
+  character.src = './images/Delorean.gif';
   traveller.addEventListener('click', handleTraveller);
   for (const eachDice of dices) {
     eachDice.addEventListener('click', handleDice);
