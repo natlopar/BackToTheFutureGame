@@ -1,32 +1,25 @@
-![Adalab](https://beta.adalab.es/resources.//adalab-logo-155x61-bg-white.png)
+ ![Title](./public/images/Back_to_the_Future_film_series_logo.webp)
 
-# Adalab web starter kit
 
-Ahoy! Este es nuestro Starter Kit creado en **node y vite**. ¿Y qué es un Starter kit? Pues es una **plantilla de proyecto con funcionalidades preinstaladas y preconfiguradas**.
+![Delorean](./public/images/Delorean.gif)
 
-Este Kit incluye un motor de plantillas HTML, el preprocesador SASS y un servidor local y muchas cosas más. El Kit nos ayuda a trabajar más cómodamente, nos automatiza tareas.
+# Back to the future game
+>Proyecto en desarrollo
 
-En el Kit hay 3 tipos de ficheros y carpetas:
+Bienvenid@s a mi primer juego realizado con Javascript. En él, tendréis que desafiar la línea temporal para intentar que las tiradas de vuestros dados generen unos datos compatibles con la fecha y el personaje con el que viajáis. 
 
-- Los ficheros que están sueltos en la raíz del repositorio, como vite.config.js, package.json... Son la configuración del proyecto y no necesitamos modificarlos (excepto este README.md, para describir tu proyecto).
-- La carpeta `src/`: son los ficheros de nuestra página web, como HTML, CSS, JS...
-- La carpeta `public/`, que tiene fichero estáticos como imágenes, fuentes, favicon, librerías de JavaScript antiguas (jQuery, ...)
-- Y la carpeta `docs/`, que es generada automáticamente cuando arrancamos el proyecto. El Kit lee los ficheros que hay dentro de `src/` y `public/`, los procesa y los genera dentro de `public/` y `docs/`.
+Por ejemplo, si decido viajar con Marty, y caigo en el año 1885, además de no poder encontrarme conmigo mismo, tampoco podría encontrarme con personajes que aún no hayan nacido en esa época o con objetos que todavía no se hayan inventado.
 
-## Guía de inicio rápido
+Tienes 7 oportunidades para tirar los distintos dados correspondientes a Año, Lugar, Personaje al que te vas a encontrar y Complemento que puedes hallar en tu viaje, y conseguir crear una historia que no haga explotar toda la galaxia.
+
+Atrévete a intentarlo o ... acaso eres un...gallina?? 
+
+
+## Guía de inicio rápido ![Doc](./public/images/Doc.gif)
 
 > **NOTA:** Necesitas tener instalado [Node JS](https://nodejs.org/) con una versión superior a la 14 para trabajar con este Starter Kit:
 
-### Pasos a seguir cada vez que queremos arrancar un proyecto desde cero:
-
-1. **Crea tu propio repositorio.**
-1. Descarga este **Starter kit desde GitHub**.
-   - No recomendamos que clones este repo ya que no podrás añadir commits.
-1. **Copia todos los ficheros** de este Starter kit en la carpeta raíz de tu repositorio.
-   - Recuerda que debes copiar **también los ficheros ocultos** que comienzan por un punto.
-   - Si has decidido clonar este repo, no debes copiar la carpeta `.git`. Si lo haces estarás machacando tu propio repositorio.
-1. **Abre una terminal** en la carpeta raíz de tu repositorio.
-1. **Instala las dependencias** locales ejecutando en la terminal el comando:
+ **Instala las dependencias** locales ejecutando en la terminal el comando:
 
 ```bash
 npm install
@@ -48,78 +41,49 @@ Este comando:
    - Convierte los ficheros SASS en CSS.
    - Combina los diferentes ficheros de HTML y los agrupa en uno o varios ficheros HTML.
 
-Después de ejecutar `npm run dev` ya puedes empezar a editar todos los ficheros que están dentro de la carpeta `src/` y programar cómodamente.
-
-### Pasos para publicar el proyecto en GitHub Pages:
-
-Para generar tu página para producción ejecuta el comando:
-
-```bash
-npm run build
-```
-
-Y a continuación:
-
-1. Sube a tu repo la carpeta `docs/` que se te acaba de generar.
-1. Entra en la pestaña `settings` de tu repo.
-1. Y en el apartado de GitHub Pages activa la opción **master branch /docs folder**.
-1. Y ya estaría!!!
-
-Además, los comandos:
-
-```bash
-npm run push-docs
-```
-o
-
-```bash
-npm run deploy
-```
-
-son un atajo que nos genera la versión de producción y hace push de la carpeta `docs/` del tirón. Te recomendamos ver el fichero `package.json` para aprender cómo funciona.
-<!--
-## Flujo de archivos con Gulp
-
-Estas tareas de Gulp producen el siguiente flujo de archivos:
-
-![Gulp flow](./gulp-flow.png)
-
-## `gulpfile.js` y `config.json`
-
-Nuestro **gulpfile.js** usa el fichero `config.json` de configuración con las rutas de los archivos a generar / observar.
-
-De esta manera separarmos las acciones que están en `gulpfile.js` de la configuración de las acciones que están en `config.json`.
--->
-## Estructura de carpetas
+## Estructura de carpetas 🗂️
 
 La estructura de carpetas tiene esta pinta:
 
 ```
 src
- ├─ api // los ficheros de esta carpeta se copian en public/api/
- |  └─ data.json
  ├─ images
  |  └─ logo.jpg
  ├─ js // los ficheros de esta carpeta se concatenan en el fichero main.js y este se guarda en public/main.js
  |  ├─ main.js
- |  └─ events.js
+ |  └─ partials.js
  ├─ scss
  |  ├─ components
  |  ├─ core
  |  ├─ layout
- |  └─ pages
+ |  └─ main.scss
  └─ html
-    └─ partials
+    └─ index.html
 ```
 
-> **NOTA:** Los partials de HTML y SASS del proyecto son orientativos. Te recomendamos usar los que quieras, y borrar los que no uses.
-<!--
-## Vídeotutoriales del Starter kit
+## Tecnologías usadas ⚛️
 
-- [Qué es, trabajar con la versión de desarrollo y rutas relativas](https://www.youtube.com/watch?v=XwvhXvBijos)
-- [Migración de un proyecto, trabajar con la versión de producción y GitHub Pages](https://www.youtube.com/watch?v=qqGClcgt9Uc)
-- [Motor de plantillas](https://www.youtube.com/watch?v=4GwXOJ045Zg)
--->
-## Falta algo?
+- HTML
+- SCSS
+- JavaScript
+- Vite
+- GitHub Pages
 
-Echas de menos que el kit haga algo en concreto? Pidelo sin problema a través de las issues o si te animas a mejorarlo mándanos un PR :)
+
+## Maquetación 😍
+
+Es un proyecto desarrollado con Sass y con diseño responsive.
+
+## Contribución 💡
+
+Agradezco feedback para poder seguir realizando mejoras y no dejar de aprender!!
+
+Muchas gracias por el tiempo dedicado!
+
+
+## Autora  👩🏻‍💻
+
+[![Autor](https://img.shields.io/badge/-%20Natalia%20López%20-%20?logo=github&labelColor=black&color=purple)](
+https://github.com/natlopar)
+
+Se lo dedico a mi hermano, quien me enseñó a divertirme jugando, a disfrutar del cine y de la música y a querer dar lo mejor de mi.💫
