@@ -25,110 +25,154 @@ const placeClockHouseCoffee = () => {
 
 
 
+// const handleDice = (e) => {
+//   totalCounter = totalCounter - 1;
+//   const idDice = e.currentTarget.id;
 
+//   if (idDice.includes('year')) {
+//     let dice = Math.floor(Math.random() * 4) + 1;
+//     year.classList.remove('hidden');
+//     resultYear.innerHTML = dice;
+//     if (dice === 1) {
+//       year.innerHTML = '1885';
+//       currentYear = '1885';
+//     } else if (dice === 2) {
+//       year.innerHTML = '1985';
+//       currentYear = '1985';
+//     } else if (dice === 3) {
+//       year.innerHTML = '2015';
+//       currentYear = '2015';
+//     } else if (dice === 4) {
+//       year.innerHTML = '1955';
+//       currentYear = '1955';
+//     }
+//   } else if (idDice.includes('place')) {
+//     let dice = getRandomNumber();
+//     place.classList.remove('hidden');
+//     resultPlace.innerHTML = dice;
+//     if (dice === 1) {
+//       place.innerHTML = clock;
+//       currentPlace = clock;
+//     } else if (dice === 2) {
+//       place.innerHTML = iron;
+//       currentPlace = iron;
+//     } else if (dice === 3) {
+//       place.innerHTML = hotel;
+//       currentPlace = hotel;
+//     } else if (dice === 4) {
+//       place.innerHTML = dance;
+//       currentPlace = dance;
+//     } else if (dice === 5) {
+//       place.innerHTML = house;
+//       currentPlace = house;
+//     } else if (dice === 6) {
+//       place.innerHTML = coffee;
+//       currentPlace = coffee;
+//     }
+//   } else if (idDice.includes('company')) {
+//     let dice = Math.floor(Math.random() * 7) + 1;
+//     company.classList.remove('hidden');
+//     resultCompany.innerHTML = dice;
+//     if (dice === 1) {
+//       company.innerHTML = 'Marty';
+//       currentCompany = 'Marty';
+//     } else if (dice === 2) {
+//       company.innerHTML = 'Doc';
+//       currentCompany = 'Doc';
+//     } else if (dice === 3) {
+//       company.innerHTML = 'Biff';
+//       currentCompany = 'Biff';
+//     } else if (dice === 4) {
+//       company.innerHTML = 'Jennifer';
+//       currentCompany = 'Jennifer';
+//     } else if (dice === 5) {
+//       company.innerHTML = george;
+//       currentCompany = george;
+//     } else if (dice === 6) {
+//       company.innerHTML = tannen;
+//       currentCompany = tannen;
+//     } else if (dice === 7) {
+//       company.innerHTML = 'Clara';
+//       currentCompany = 'Clara';
+//     }
+//   } else if (idDice.includes('complement')) {
+//     let dice = Math.floor(Math.random() * 8) + 1;
+//     complement.classList.remove('hidden');
+//     resultComplement.innerHTML = dice;
+//     if (dice === 1) {
+//       complement.innerHTML = vest;
+//       currentComplement = vest;
+//     } else if (dice === 2) {
+//       complement.innerHTML = scooter;
+//       currentComplement = scooter;
+//     } else if (dice === 3) {
+//       complement.innerHTML = train;
+//       currentComplement = train;
+//     } else if (dice === 4) {
+//       complement.innerHTML = horse;
+//       currentComplement = horse;
+//     } else if (dice === 5) {
+//       complement.innerHTML = 'Einstein';
+//       currentComplement = 'Einstein';
+//     } else if (dice === 6) {
+//       complement.innerHTML = 'Plutonio';
+//       currentComplement = 'Plutonio';
+//     } else if (dice === 7) {
+//       complement.innerHTML = cond;
+//       currentComplement = cond;
+//     } else if (dice === 8) {
+//       complement.innerHTML = radiation;
+//       currentComplement = radiation;
+//     }
+//   }
+//   win();
+// };
+
+const resultElementClasses = {
+  'year': '.js-resultYear',
+  'place': '.js-resultPlace',
+  'company': '.js-resultCompany',
+  'complement': '.js-resultComplement'
+};
 
 const handleDice = (e) => {
-  totalCounter = totalCounter - 1;
-  const idDice = e.currentTarget.id;
+  totalCounter--;
 
-  if (idDice.includes('year')) {
-    let dice = Math.floor(Math.random() * 4) + 1;
-    year.classList.remove('hidden');
-    resultYear.innerHTML = dice;
-    if (dice === 1) {
-      year.innerHTML = '1885';
-      currentYear = '1885';
-    } else if (dice === 2) {
-      year.innerHTML = '1985';
-      currentYear = '1985';
-    } else if (dice === 3) {
-      year.innerHTML = '2015';
-      currentYear = '2015';
-    } else if (dice === 4) {
-      year.innerHTML = '1955';
-      currentYear = '1955';
-    }
-  } else if (idDice.includes('place')) {
-    let dice = getRandomNumber();
-    place.classList.remove('hidden');
-    resultPlace.innerHTML = dice;
-    if (dice === 1) {
-      place.innerHTML = clock;
-      currentPlace = clock;
-    } else if (dice === 2) {
-      place.innerHTML = iron;
-      currentPlace = iron;
-    } else if (dice === 3) {
-      place.innerHTML = hotel;
-      currentPlace = hotel;
-    } else if (dice === 4) {
-      place.innerHTML = dance;
-      currentPlace = dance;
-    } else if (dice === 5) {
-      place.innerHTML = house;
-      currentPlace = house;
-    } else if (dice === 6) {
-      place.innerHTML = coffee;
-      currentPlace = coffee;
-    }
-  } else if (idDice.includes('company')) {
-    let dice = Math.floor(Math.random() * 7) + 1;
-    company.classList.remove('hidden');
-    resultCompany.innerHTML = dice;
-    if (dice === 1) {
-      company.innerHTML = 'Marty';
-      currentCompany = 'Marty';
-    } else if (dice === 2) {
-      company.innerHTML = 'Doc';
-      currentCompany = 'Doc';
-    } else if (dice === 3) {
-      company.innerHTML = 'Biff';
-      currentCompany = 'Biff';
-    } else if (dice === 4) {
-      company.innerHTML = 'Jennifer';
-      currentCompany = 'Jennifer';
-    } else if (dice === 5) {
-      company.innerHTML = george;
-      currentCompany = george;
-    } else if (dice === 6) {
-      company.innerHTML = tannen;
-      currentCompany = tannen;
-    } else if (dice === 7) {
-      company.innerHTML = 'Clara';
-      currentCompany = 'Clara';
-    }
-  } else if (idDice.includes('complement')) {
-    let dice = Math.floor(Math.random() * 8) + 1;
-    complement.classList.remove('hidden');
-    resultComplement.innerHTML = dice;
-    if (dice === 1) {
-      complement.innerHTML = vest;
-      currentComplement = vest;
-    } else if (dice === 2) {
-      complement.innerHTML = scooter;
-      currentComplement = scooter;
-    } else if (dice === 3) {
-      complement.innerHTML = train;
-      currentComplement = train;
-    } else if (dice === 4) {
-      complement.innerHTML = horse;
-      currentComplement = horse;
-    } else if (dice === 5) {
-      complement.innerHTML = 'Einstein';
-      currentComplement = 'Einstein';
-    } else if (dice === 6) {
-      complement.innerHTML = 'Plutonio';
-      currentComplement = 'Plutonio';
-    } else if (dice === 7) {
-      complement.innerHTML = cond;
-      currentComplement = cond;
-    } else if (dice === 8) {
-      complement.innerHTML = radiation;
-      currentComplement = radiation;
-    }
+  const idDice = e.currentTarget.id;
+  const options = {
+    'year': ['1885', '1985', '2015', '1955'],
+    'place': [clock, iron, hotel, dance, house, coffee],
+    'company': ['Marty', 'Doc', 'Biff', 'Jennifer', george, tannen, 'Clara'],
+    'complement': [vest, scooter, train, horse, 'Einstein', 'Plutonio', cond, radiation]
+  };
+
+  const randomIndex = Math.floor(Math.random() * options[idDice].length);
+  const selectedOption = options[idDice][randomIndex];
+
+  const targetElementClass = resultElementClasses[idDice];
+  const targetElement = document.querySelector(targetElementClass);
+  
+  targetElement.classList.remove('hidden');
+  targetElement.innerHTML = selectedOption;
+
+  switch (idDice) {
+    case 'year':
+      currentYear = selectedOption;
+      break;
+    case 'place':
+      currentPlace = selectedOption;
+      break;
+    case 'company':
+      currentCompany = selectedOption;
+      break;
+    case 'complement':
+      currentComplement = selectedOption;
+      break;
   }
+
   win();
 };
+
 
 const disabled = () => {
   if (final === 'win') {
@@ -369,3 +413,6 @@ const win = () => {
     gifEnd.src = './images/Doc1.gif';
   }
 };
+
+
+

@@ -243,10 +243,11 @@
       transition: transform 0.3s ease;
     }
   }
-  &--result {
+  > p {
     font-size: 1.7rem;
     background-color: white;
     padding: 5px;
+    border-radius: 5px;
 
 
   }
