@@ -23,7 +23,284 @@ const placeClockHouseCoffee = () => {
     : false;
 };
 
+const companyBiffJennGeorge = () =>{
+ return ( currentCompany === 'Biff' ||
+ currentCompany === 'Jennifer' ||
+ currentCompany === george) ? true : false
+}
 
+
+const complPluCondRad = () =>{
+
+  return (
+  currentComplement === 'Plutonio' ||
+  currentComplement === cond ||
+  currentComplement === radiation) ? true : false
+  
+}
+
+
+const resultElementClasses = {
+  'year': '.js-resultYear',
+  'place': '.js-resultPlace',
+  'company': '.js-resultCompany',
+  'complement': '.js-resultComplement'
+};
+
+const handleDice = (e) => {
+  totalCounter--;
+
+  const idDice = e.currentTarget.id;
+  const options = {
+    'year': ['1885', '1985', '2015', '1955'],
+    'place': [clock, iron, hotel, dance, house, coffee],
+    'company': ['Marty', 'Doc', 'Biff', 'Jennifer', george, tannen, 'Clara'],
+    'complement': [vest, scooter, train, horse, 'Einstein', 'Plutonio', cond, radiation]
+  };
+
+  const randomIndex = Math.floor(Math.random() * options[idDice].length);
+  const selectedOption = options[idDice][randomIndex];
+
+  const targetElementClass = resultElementClasses[idDice];
+  const targetElement = document.querySelector(targetElementClass);
+  
+  targetElement.classList.remove('hidden');
+  targetElement.innerHTML = selectedOption;
+
+  switch (idDice) {
+    case 'year':
+      currentYear = selectedOption;
+      break;
+    case 'place':
+      currentPlace = selectedOption;
+      break;
+    case 'company':
+      currentCompany = selectedOption;
+      break;
+    case 'complement':
+      currentComplement = selectedOption;
+      break;
+  }
+
+  win();
+};
+
+
+const disabled = () => {
+  if (final === 'win') {
+    for (const eachDice of dices) {
+      eachDice.removeEventListener('click', handleDice);
+    }
+  }
+};
+
+const showSuccess = () => {
+  counter.innerHTML = '¡¡¡Has ganado, qué fuerte!!!';
+  counter.classList.remove('hidden');
+  gifEnd.classList.remove('hidden');
+  gifEnd.src = './images/200.gif';
+  final = 'win';
+  disabled();
+};
+
+const win = () => {
+  if (totalCounter > 0) {
+    counter.innerHTML = `Te quedan ${totalCounter} tiradas`;
+
+    if (currentCharacter === 'Marty') {
+      if (currentYear === '1885') {
+        if (
+          (currentPlace === clock || currentPlace === iron) &&
+          (currentCompany === 'Doc' ||
+            currentCompany === tannen ||
+            currentCompany === 'Clara') &&
+          (currentComplement === train || currentComplement === horse)
+        ) {
+          showSuccess();
+        }
+      } else if (currentYear === '1985') {
+        if (
+          placeClockHouseCoffee &&
+          (currentCompany === 'Doc' ||
+          companyBiffJennGeorge) &&
+          (currentComplement === 'Einstein' ||
+          complPluCondRad)
+        ) {
+          showSuccess();
+        }
+      } else if (currentYear === '1955') {
+        if (
+          ( placeClockHouseCoffee ||
+            currentPlace === dance) &&
+          (currentCompany === 'Doc' ||
+            currentCompany === 'Biff' ||
+            currentCompany === george) &&
+          (currentComplement === cond || currentComplement === radiation)
+        ) {
+          showSuccess();
+        }
+      } else if (currentYear === '2015') {
+        if (
+          ( placeClockHouseCoffee ||
+            currentPlace === hotel
+          ) &&
+          (currentCompany === 'Doc' ||
+          companyBiffJennGeorge) &&
+          (currentComplement === vest ||
+            currentComplement === scooter ||
+            complPluCondRad)
+        ) {
+          showSuccess();
+        }
+      }
+    } else if (currentCharacter === 'Doc') {
+      if (currentYear === '1885') {
+        if (
+          (currentPlace === clock || currentPlace === iron) &&
+          (currentCompany === 'Clara' || currentCompany === tannen) &&
+          (currentComplement === train || currentComplement === horse)
+        ) {
+          showSuccess();
+        }
+      } else if (currentYear === '1985') {
+        if (
+          ( placeClockHouseCoffee) &&
+          (currentCompany === 'Marty' ||
+          companyBiffJennGeorge) &&
+          (currentComplement === 'Einstein' ||
+          complPluCondRad)
+        ) {
+          showSuccess();
+        }
+      } else if (currentYear === '1955') {
+        if (
+          ( placeClockHouseCoffee ||
+            currentPlace === dance) &&
+          (currentCompany === 'Biff' || currentCompany === george) &&
+          (currentComplement === cond || currentComplement === radiation)
+        ) {
+          showSuccess();
+        }
+      } else if (currentYear === '2015') {
+        if (
+          (placeClockHouseCoffee ||
+            currentPlace === hotel ) &&
+          (currentCompany === 'Marty' ||
+          companyBiffJennGeorge) &&
+          (currentComplement === vest ||
+            currentComplement === scooter ||
+            complPluCondRad)
+        ) {
+          showSuccess();
+        }
+      }
+    } else if (currentCharacter === 'Biff') {
+      if (currentYear === '1885') {
+        if (
+          (currentPlace === clock || currentPlace === iron) &&
+          (currentCompany === 'Clara' ||
+            currentCompany === 'Doc' ||
+            currentCompany === tannen) &&
+          (currentComplement === train || currentComplement === horse)
+        ) {
+          showSuccess();
+        }
+      } else if (currentYear === '1985') {
+        if (
+          (placeClockHouseCoffee) &&
+          (currentCompany === 'Marty' ||
+            currentCompany === 'Doc' ||
+            currentCompany === 'Jennifer' ||
+            currentCompany === george) &&
+          (currentComplement === 'Einstein' ||
+          complPluCondRad)
+        ) {
+          showSuccess();
+        }
+      } else if (currentYear === '1955') {
+        if (
+          (placeClockHouseCoffee ||
+            currentPlace === dance) &&
+          (currentCompany === 'Doc' || currentCompany === george) &&
+          (currentComplement === cond || currentComplement === radiation)
+        ) {
+          showSuccess();
+        }
+      } else if (currentYear === '2015') {
+        if (
+          (placeClockHouseCoffee ||
+            currentPlace === hotel) &&
+          (currentCompany === 'Marty' ||
+            currentCompany === 'Doc' ||
+            currentCompany === 'Jennifer' ||
+            currentCompany === george) &&
+          (currentComplement === vest ||
+            currentComplement === scooter ||
+            complPluCondRad)
+        ) {
+          showSuccess();
+        }
+      }
+    } else if (currentCharacter === 'Jennifer') {
+      if (currentYear === '1885') {
+        if (
+          (currentPlace === clock || currentPlace === iron) &&
+          (currentCompany === 'Clara' ||
+            currentCompany === 'Doc' ||
+            currentCompany === tannen) &&
+          (currentComplement === train || currentComplement === horse)
+        ) {
+          showSuccess();
+        }
+      } else if (currentYear === '1985') {
+        if (
+          (placeClockHouseCoffee) &&
+          (currentCompany === 'Marty' ||
+            currentCompany === 'Doc' ||
+            currentCompany === 'Biff' ||
+            currentCompany === george) &&
+          (currentComplement === 'Einstein' ||
+          complPluCondRad)
+        ) {
+          showSuccess();
+        }
+      } else if (currentYear === '1955') {
+        if (
+          (placeClockHouseCoffee||
+            currentPlace === dance) &&
+          (currentCompany === 'Doc' ||
+            currentCompany === george ||
+            currentCompany === 'Biff') &&
+          (currentComplement === cond || currentComplement === radiation)
+        ) {
+          showSuccess();
+        }
+      } else if (currentYear === '2015') {
+        if (
+          (placeClockHouseCoffee ||
+            currentPlace === hotel ) &&
+          (currentCompany === 'Marty' ||
+            currentCompany === 'Doc' ||
+            currentCompany === 'Biff' ||
+            currentCompany === george) &&
+          (currentComplement === vest ||
+            currentComplement === scooter ||
+            complPluCondRad)
+        ) {
+          showSuccess();
+        }
+      }
+    }
+  } else if (totalCounter === 0) {
+    for (const eachDice of dices) {
+      eachDice.removeEventListener('click', handleDice); 
+    }
+    counter.classList.remove('hidden');
+    counter.innerHTML = `Hay demasiadas paradojas temporales, has perdido... corre Marty!!!`;
+    gifEnd.classList.remove('hidden');
+    gifEnd.src = './images/Doc1.gif';
+  }
+};
 
 // const handleDice = (e) => {
 //   totalCounter = totalCounter - 1;
@@ -128,291 +405,6 @@ const placeClockHouseCoffee = () => {
 //   win();
 // };
 
-const resultElementClasses = {
-  'year': '.js-resultYear',
-  'place': '.js-resultPlace',
-  'company': '.js-resultCompany',
-  'complement': '.js-resultComplement'
-};
-
-const handleDice = (e) => {
-  totalCounter--;
-
-  const idDice = e.currentTarget.id;
-  const options = {
-    'year': ['1885', '1985', '2015', '1955'],
-    'place': [clock, iron, hotel, dance, house, coffee],
-    'company': ['Marty', 'Doc', 'Biff', 'Jennifer', george, tannen, 'Clara'],
-    'complement': [vest, scooter, train, horse, 'Einstein', 'Plutonio', cond, radiation]
-  };
-
-  const randomIndex = Math.floor(Math.random() * options[idDice].length);
-  const selectedOption = options[idDice][randomIndex];
-
-  const targetElementClass = resultElementClasses[idDice];
-  const targetElement = document.querySelector(targetElementClass);
-  
-  targetElement.classList.remove('hidden');
-  targetElement.innerHTML = selectedOption;
-
-  switch (idDice) {
-    case 'year':
-      currentYear = selectedOption;
-      break;
-    case 'place':
-      currentPlace = selectedOption;
-      break;
-    case 'company':
-      currentCompany = selectedOption;
-      break;
-    case 'complement':
-      currentComplement = selectedOption;
-      break;
-  }
-
-  win();
-};
-
-
-const disabled = () => {
-  if (final === 'win') {
-    for (const eachDice of dices) {
-      eachDice.removeEventListener('click', handleDice);
-    }
-  }
-};
-
-const showSuccess = () => {
-  counter.innerHTML = '¡¡¡Has ganado, qué fuerte!!!';
-  counter.classList.remove('hidden');
-  gifEnd.classList.remove('hidden');
-  gifEnd.src = './images/200.gif';
-  final = 'win';
-  disabled();
-};
-
-const win = () => {
-  if (totalCounter > 0) {
-    counter.innerHTML = `Te quedan ${totalCounter} tiradas`;
-
-    if (currentCharacter === 'Marty') {
-      if (currentYear === '1885') {
-        if (
-          (currentPlace === clock || currentPlace === iron) &&
-          (currentCompany === 'Doc' ||
-            currentCompany === tannen ||
-            currentCompany === 'Clara') &&
-          (currentComplement === train || currentComplement === horse)
-        ) {
-          showSuccess();
-        }
-      } else if (currentYear === '1985') {
-        if (
-          placeClockHouseCoffee &&
-          (currentCompany === 'Doc' ||
-            currentCompany === 'Biff' ||
-            currentCompany === 'Jennifer' ||
-            currentCompany === george) &&
-          (currentComplement === 'Einstein' ||
-            currentComplement === 'Plutonio' ||
-            currentComplement === cond ||
-            currentComplement === radiation)
-        ) {
-          showSuccess();
-        }
-      } else if (currentYear === '1955') {
-        if (
-          ( placeClockHouseCoffee ||
-            currentPlace === dance) &&
-          (currentCompany === 'Doc' ||
-            currentCompany === 'Biff' ||
-            currentCompany === george) &&
-          (currentComplement === cond || currentComplement === radiation)
-        ) {
-          showSuccess();
-        }
-      } else if (currentYear === '2015') {
-        if (
-          ( placeClockHouseCoffee ||
-            currentPlace === hotel
-          ) &&
-          (currentCompany === 'Doc' ||
-            currentCompany === 'Biff' ||
-            currentCompany === 'Jennifer' ||
-            currentCompany === george) &&
-          (currentComplement === vest ||
-            currentComplement === scooter ||
-            currentComplement === 'Plutonio' ||
-            currentComplement === cond ||
-            currentComplement === radiation)
-        ) {
-          showSuccess();
-        }
-      }
-    } else if (currentCharacter === 'Doc') {
-      if (currentYear === '1885') {
-        if (
-          (currentPlace === clock || currentPlace === iron) &&
-          (currentCompany === 'Clara' || currentCompany === tannen) &&
-          (currentComplement === train || currentComplement === horse)
-        ) {
-          showSuccess();
-        }
-      } else if (currentYear === '1985') {
-        if (
-          ( placeClockHouseCoffee) &&
-          (currentCompany === 'Marty' ||
-            currentCompany === 'Biff' ||
-            currentCompany === 'Jennifer' ||
-            currentCompany === george) &&
-          (currentComplement === 'Einstein' ||
-            currentComplement === 'Plutonio' ||
-            currentComplement === cond ||
-            currentComplement === radiation)
-        ) {
-          showSuccess();
-        }
-      } else if (currentYear === '1955') {
-        if (
-          ( placeClockHouseCoffee ||
-            currentPlace === dance) &&
-          (currentCompany === 'Biff' || currentCompany === george) &&
-          (currentComplement === cond || currentComplement === radiation)
-        ) {
-          showSuccess();
-        }
-      } else if (currentYear === '2015') {
-        if (
-          (placeClockHouseCoffee ||
-            currentPlace === hotel ) &&
-          (currentCompany === 'Marty' ||
-            currentCompany === 'Biff' ||
-            currentCompany === 'Jennifer' ||
-            currentCompany === george) &&
-          (currentComplement === vest ||
-            currentComplement === scooter ||
-            currentComplement === 'Plutonio' ||
-            currentComplement === cond ||
-            currentComplement === radiation)
-        ) {
-          showSuccess();
-        }
-      }
-    } else if (currentCharacter === 'Biff') {
-      if (currentYear === '1885') {
-        if (
-          (currentPlace === clock || currentPlace === iron) &&
-          (currentCompany === 'Clara' ||
-            currentCompany === 'Doc' ||
-            currentCompany === tannen) &&
-          (currentComplement === train || currentComplement === horse)
-        ) {
-          showSuccess();
-        }
-      } else if (currentYear === '1985') {
-        if (
-          (placeClockHouseCoffee) &&
-          (currentCompany === 'Marty' ||
-            currentCompany === 'Doc' ||
-            currentCompany === 'Jennifer' ||
-            currentCompany === george) &&
-          (currentComplement === 'Einstein' ||
-            currentComplement === 'Plutonio' ||
-            currentComplement === cond ||
-            currentComplement === radiation)
-        ) {
-          showSuccess();
-        }
-      } else if (currentYear === '1955') {
-        if (
-          (placeClockHouseCoffee ||
-            currentPlace === dance) &&
-          (currentCompany === 'Doc' || currentCompany === george) &&
-          (currentComplement === cond || currentComplement === radiation)
-        ) {
-          showSuccess();
-        }
-      } else if (currentYear === '2015') {
-        if (
-          (placeClockHouseCoffee ||
-            currentPlace === hotel) &&
-          (currentCompany === 'Marty' ||
-            currentCompany === 'Doc' ||
-            currentCompany === 'Jennifer' ||
-            currentCompany === george) &&
-          (currentComplement === vest ||
-            currentComplement === scooter ||
-            currentComplement === 'Plutonio' ||
-            currentComplement === cond ||
-            currentComplement === radiation)
-        ) {
-          showSuccess();
-        }
-      }
-    } else if (currentCharacter === 'Jennifer') {
-      if (currentYear === '1885') {
-        if (
-          (currentPlace === clock || currentPlace === iron) &&
-          (currentCompany === 'Clara' ||
-            currentCompany === 'Doc' ||
-            currentCompany === tannen) &&
-          (currentComplement === train || currentComplement === horse)
-        ) {
-          showSuccess();
-        }
-      } else if (currentYear === '1985') {
-        if (
-          (placeClockHouseCoffee) &&
-          (currentCompany === 'Marty' ||
-            currentCompany === 'Doc' ||
-            currentCompany === 'Biff' ||
-            currentCompany === george) &&
-          (currentComplement === 'Einstein' ||
-            currentComplement === 'Plutonio' ||
-            currentComplement === cond ||
-            currentComplement === radiation)
-        ) {
-          showSuccess();
-        }
-      } else if (currentYear === '1955') {
-        if (
-          (placeClockHouseCoffee||
-            currentPlace === dance) &&
-          (currentCompany === 'Doc' ||
-            currentCompany === george ||
-            currentCompany === 'Biff') &&
-          (currentComplement === cond || currentComplement === radiation)
-        ) {
-          showSuccess();
-        }
-      } else if (currentYear === '2015') {
-        if (
-          (placeClockHouseCoffee ||
-            currentPlace === hotel ) &&
-          (currentCompany === 'Marty' ||
-            currentCompany === 'Doc' ||
-            currentCompany === 'Biff' ||
-            currentCompany === george) &&
-          (currentComplement === vest ||
-            currentComplement === scooter ||
-            currentComplement === 'Plutonio' ||
-            currentComplement === cond ||
-            currentComplement === radiation)
-        ) {
-          showSuccess();
-        }
-      }
-    }
-  } else if (totalCounter === 0) {
-    for (const eachDice of dices) {
-      eachDice.removeEventListener('click', handleDice); 
-    }
-    counter.classList.remove('hidden');
-    counter.innerHTML = `Hay demasiadas paradojas temporales, has perdido... corre Marty!!!`;
-    gifEnd.classList.remove('hidden');
-    gifEnd.src = './images/Doc1.gif';
-  }
-};
 
 
 
