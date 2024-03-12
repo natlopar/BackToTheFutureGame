@@ -18,11 +18,8 @@ const getRandomNumber = () => {
 };
 
 const placeClockHouseCoffee = () => {
-  currentPlace === clock || currentPlace === house || currentPlace === coffee
-    ? true
-    : false;
+  return (currentPlace === clock || currentPlace === house || currentPlace === coffee) ? true : false ;
 };
-
 
 const handleDice = (e) => {
   totalCounter--;
@@ -30,26 +27,28 @@ const handleDice = (e) => {
   const idDice = e.currentTarget.id;
   let dice;
 
+  const setDiceValues = (options, targetElement, targetVariable) => {
+    dice = options[Math.floor(Math.random() * options.length)];
+    targetElement.innerHTML = dice;
+    targetVariable = dice;
+  };
+
   switch (idDice) {
     case 'year':
-      dice = ['1885', '1985', '2015', '1955'][Math.floor(Math.random() * 4)];
-      year.innerHTML = dice;
-      currentYear = dice;
+      year.classList.remove('hidden');
+      setDiceValues(['1885', '1985', '2015', '1955'], year, currentYear);
       break;
     case 'place':
-      dice = [clock, iron, hotel, dance, house, coffee][getRandomNumber() - 1];
-      place.innerHTML = dice;
-      currentPlace = dice;
+      place.classList.remove('hidden');
+      setDiceValues([clock, iron, hotel, dance, house, coffee], place, currentPlace);
       break;
     case 'company':
-      dice = ['Marty', 'Doc', 'Biff', 'Jennifer', george, tannen, 'Clara'][Math.floor(Math.random() * 7)];
-      company.innerHTML = dice;
-      currentCompany = dice;
+      company.classList.remove('hidden');
+      setDiceValues(['Marty', 'Doc', 'Biff', 'Jennifer', george, tannen, 'Clara'], company, currentCompany);
       break;
     case 'complement':
-      dice = [vest, scooter, train, horse, 'Einstein', 'Plutonio', cond, radiation][Math.floor(Math.random() * 8)];
-      complement.innerHTML = dice;
-      currentComplement = dice;
+      complement.classList.remove('hidden');
+      setDiceValues([vest, scooter, train, horse, 'Einstein', 'Plutonio', cond, radiation], complement, currentComplement);
       break;
   }
 
@@ -57,116 +56,12 @@ const handleDice = (e) => {
 };
 
 
-
-// const handleDice = (e) => {
-//   totalCounter = totalCounter - 1;
-//   const idDice = e.currentTarget.id;
-
-//   if (idDice.includes('year')) {
-//     let dice = Math.floor(Math.random() * 4) + 1;
-//     year.classList.remove('hidden');
-//     resultYear.innerHTML = dice;
-//     if (dice === 1) {
-//       year.innerHTML = '1885';
-//       currentYear = '1885';
-//     } else if (dice === 2) {
-//       year.innerHTML = '1985';
-//       currentYear = '1985';
-//     } else if (dice === 3) {
-//       year.innerHTML = '2015';
-//       currentYear = '2015';
-//     } else if (dice === 4) {
-//       year.innerHTML = '1955';
-//       currentYear = '1955';
-//     }
-//   } else if (idDice.includes('place')) {
-//     let dice = getRandomNumber();
-//     place.classList.remove('hidden');
-//     resultPlace.innerHTML = dice;
-//     if (dice === 1) {
-//       place.innerHTML = clock;
-//       currentPlace = clock;
-//     } else if (dice === 2) {
-//       place.innerHTML = iron;
-//       currentPlace = iron;
-//     } else if (dice === 3) {
-//       place.innerHTML = hotel;
-//       currentPlace = hotel;
-//     } else if (dice === 4) {
-//       place.innerHTML = dance;
-//       currentPlace = dance;
-//     } else if (dice === 5) {
-//       place.innerHTML = house;
-//       currentPlace = house;
-//     } else if (dice === 6) {
-//       place.innerHTML = coffee;
-//       currentPlace = coffee;
-//     }
-//   } else if (idDice.includes('company')) {
-//     let dice = Math.floor(Math.random() * 7) + 1;
-//     company.classList.remove('hidden');
-//     resultCompany.innerHTML = dice;
-//     if (dice === 1) {
-//       company.innerHTML = 'Marty';
-//       currentCompany = 'Marty';
-//     } else if (dice === 2) {
-//       company.innerHTML = 'Doc';
-//       currentCompany = 'Doc';
-//     } else if (dice === 3) {
-//       company.innerHTML = 'Biff';
-//       currentCompany = 'Biff';
-//     } else if (dice === 4) {
-//       company.innerHTML = 'Jennifer';
-//       currentCompany = 'Jennifer';
-//     } else if (dice === 5) {
-//       company.innerHTML = george;
-//       currentCompany = george;
-//     } else if (dice === 6) {
-//       company.innerHTML = tannen;
-//       currentCompany = tannen;
-//     } else if (dice === 7) {
-//       company.innerHTML = 'Clara';
-//       currentCompany = 'Clara';
-//     }
-//   } else if (idDice.includes('complement')) {
-//     let dice = Math.floor(Math.random() * 8) + 1;
-//     complement.classList.remove('hidden');
-//     resultComplement.innerHTML = dice;
-//     if (dice === 1) {
-//       complement.innerHTML = vest;
-//       currentComplement = vest;
-//     } else if (dice === 2) {
-//       complement.innerHTML = scooter;
-//       currentComplement = scooter;
-//     } else if (dice === 3) {
-//       complement.innerHTML = train;
-//       currentComplement = train;
-//     } else if (dice === 4) {
-//       complement.innerHTML = horse;
-//       currentComplement = horse;
-//     } else if (dice === 5) {
-//       complement.innerHTML = 'Einstein';
-//       currentComplement = 'Einstein';
-//     } else if (dice === 6) {
-//       complement.innerHTML = 'Plutonio';
-//       currentComplement = 'Plutonio';
-//     } else if (dice === 7) {
-//       complement.innerHTML = cond;
-//       currentComplement = cond;
-//     } else if (dice === 8) {
-//       complement.innerHTML = radiation;
-//       currentComplement = radiation;
-//     }
-//   }
-//   win();
-// };
-
 const disabled = () => {
-  if (final === 'win') {
+
     for (const eachDice of dices) {
-      eachDice.removeEventListener('click', handleDice); //revisar esto
+      eachDice.removeEventListener('click', handleDice);
     }
-  }
+
 };
 
 const showSuccess = () => {
@@ -392,7 +287,7 @@ const win = () => {
     }
   } else if (totalCounter === 0) {
     for (const eachDice of dices) {
-      eachDice.removeEventListener('click', handleDice); //revisar esto
+      eachDice.removeEventListener('click', handleDice);
     }
     counter.classList.remove('hidden');
     counter.innerHTML = `Hay demasiadas paradojas temporales, has perdido... corre Marty!!!`;
@@ -400,3 +295,4 @@ const win = () => {
     gifEnd.src = './images/Doc1.gif';
   }
 };
+
