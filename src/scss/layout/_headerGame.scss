@@ -54,15 +54,19 @@
         }
       }
       &--hidden {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
         position: absolute;
-        width: 75vw;
-        font-size: 2rem;
+        text-align: start;
+        width: 90vw;
+        font-size: 1.8rem;
         transform: translate(-30%);
-        font-weight: bold;
-        list-style: none;
+        list-style:disc;
         background-color: black;
         color: white;
-        padding: 10px;
+        margin-right:10px;
+        padding: 20px 30px;
         box-shadow: -1px 4px 5px rgba(0, 0, 0, 0.65);
         border-radius: 5px;
         z-index: 5;
@@ -73,3 +77,18 @@
       }
     }
   }
+
+  .card {
+
+    background-color: #212121;
+    box-shadow: 15px 15px 30px #191919,
+                 -15px -15px 30px #292929;
+    transition: border-radius cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s,
+                 transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+   }
+   
+  //  .card:hover {
+  //   border-bottom-right-radius: 10px;
+  //   border-top-left-radius:10px;
+  //   transform: scale(1.20);
+  //  }

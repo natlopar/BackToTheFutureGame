@@ -5,6 +5,7 @@
 
 .body {
   height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .hidden {
   display: none;
@@ -79,7 +80,7 @@
 
 .finalWin {
   background-color: white;
-  height: 250px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,6 +91,11 @@
   border-radius: 25px;
   border: 2px solid orangered;
   box-shadow: -1px 4px 5px rgba(0, 0, 0, 0.65);
+  @media (min-width: 768px) {
+    left: 30%;
+    height: 350px;
+    width: 350px;
+  }
 }
 
 .finalLose {
@@ -105,11 +111,52 @@
   border-radius: 25px;
   border: 2px solid orangered;
   box-shadow: -1px 4px 5px rgba(0, 0, 0, 0.65);
+  @media (min-width: 768px) {
+    left: 30%;
+    height: 350px;
+    width: 400px;
+  }
 }
 .warning {
 margin-right: 5px;
 }
 
+
+.blob {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #ff0000;
+  opacity: 1;
+  filter: blur(12px);
+  animation: blob-bounce 5s infinite ease;
+}
+
+@keyframes blob-bounce {
+  0% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+  }
+
+  50% {
+    transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+  }
+
+  75% {
+    transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+  }
+
+  100% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+}
 
 .slide {
   -webkit-animation: slide-in-elliptic-top-fwd 2s
@@ -252,6 +299,14 @@ margin-right: 5px;
         color: #e3491a;
         background-color: white;
       }
+      @media (min-width: 768px) {
+        font-size: 2rem;
+        height: 65px;
+       }
+       @media (min-width: 1020px) {
+        font-size: 2rem;
+        height: 40px;
+       }
     }
     &--btnReset {
       cursor: pointer;
@@ -264,11 +319,15 @@ margin-right: 5px;
         color: #e3491a;
         background-color: white;
       }
+      @media (min-width: 768px) {
+       font-size: 2rem;
+      }
     }
   }
 }
 
 .errors {
+  margin: 10px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -336,8 +395,13 @@ margin-right: 5px;
         text-align: center;
         color: #e3491a;
         background-color: white;
-        text-shadow: -2px 3px 22px rgba(0, 0, 0, 0.95);
+  
         border-radius: 25px;
+        @media (min-width: 768px) {
+          font-size: 2rem;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          margin: 10px 0;
+        }
       }
     }
 
