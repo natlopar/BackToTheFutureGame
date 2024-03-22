@@ -8,11 +8,11 @@ const handleReset = (e) => {
   counter.innerHTML = ``;
   totalCounter = 7;
   gifEnd.classList.add('hidden');
-  year.innerHTML = '';
-  place.innerHTML = '';
-  company.innerHTML = '';
-  complement.innerHTML = '';
   currentCharacter ='';
+  resultCompany.innerHTML= '';
+  resultComplement.innerHTML='';
+  resultYear.innerHTML= '';
+  resultPlace.innerHTML ='';
   currentCompany = '';
   currentComplement = '';
   currentPlace= '';
