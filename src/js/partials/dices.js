@@ -519,43 +519,118 @@ const showSuccess = () => {
    
   // }
 
+  const places1885 = [clock, iron];
+  const places1985= [clock, house, coffee];
+  const places1955 = [...places1985, dance]
+  const places2015 =  [...places1985, hotel];
+
+  const complement1885 =  [train, horse];
+  
+  const complement1955 = [cond, radiation];
+  const complement1985 =   [...complement1955, 'Einstein','Plutonio'];
+  const complement2015 =  [...complement1955,'Plutonio', vest, scooter];
+
+
+  // const win = () => {
+  //   // Define un objeto con las condiciones de cada personaje por año
+  //   const conditions = {
+  //     'Marty': {
+  //       '1885': {places: places1885, companies: ['Doc', tannen, 'Clara'], complements: complement1885 },
+  //       '1985': { places:  places1985, companies: ['Doc', 'Biff', 'Jennifer', george], complements: complement1985},
+  //       '1955': { places: places1955, companies: ['Doc', 'Biff', george], complements:complement1955 },
+  //       '2015': { places: places2015, companies: ['Doc', 'Biff', 'Jennifer', george], complements: complement2015 }
+  //     },
+  //     'Doc': {
+  //       '1885': { places: places1885, companies: ['Clara', tannen], complements: complement1885},
+  //       '1985': { places: places1985, companies: ['Marty', 'Biff', 'Jennifer', george], complements:complement1985 },
+  //       '1955': { places: places1955, companies: ['Biff', george], complements: complement1955 },
+  //       '2015': { places: places2015, companies: ['Marty', 'Biff', 'Jennifer', george], complements: complement2015}
+  //     },
+  //     'Biff': {
+  //       '1885': { places: places1885, companies: ['Clara', 'Doc', tannen], complements: complement1885 },
+  //       '1985': { places: places1985, companies: ['Marty', 'Doc', 'Jennifer', george], complements: complement1985 },
+  //       '1955': { places: places1955, companies: ['Doc', george], complements: complement1955 },
+  //       '2015': { places: places2015, companies: ['Marty', 'Doc', 'Jennifer', george], complements: complement2015 }
+  //     },
+  //     'Jennifer': {
+  //       '1885': {places: places1885, companies: ['Clara', 'Doc', tannen], complements: complement1885},
+  //       '1985': { places:  places1985, companies: ['Marty', 'Doc', 'Biff', george], complements: complement1985 },
+  //       '1955': { places: places1955, companies: ['Doc', george, 'Biff'], complements: complement1955},
+  //       '2015': { places: places2015, companies: ['Marty', 'Doc', 'Biff', george], complements: complement2015 }
+  //     }
+  //   };
+  
+  //   // Obtén las condiciones del personaje actual
+  //   const characterConditions = conditions[currentCharacter][currentYear];
+  
+  //   // Verifica si las condiciones actuales coinciden con las condiciones del personaje
+  //   const isWin = characterConditions.places.includes(currentPlace) &&
+  //                 characterConditions.companies.includes(currentCompany) &&
+  //                 characterConditions.complements.includes(currentComplement);
+  //   const notWinPlace = !characterConditions.places.includes(currentPlace) ? complement.innerHTML= 'Ese lugar no existe en ese año' : '';
+  //   const notWinCompany = !characterConditions.companies.includes(currentCompany) ? complement.innerHTML = 'Esa persona no existe ya/aún o eres tú' : '';
+  //   const notWinComplements = !characterConditions.complements.includes(currentComplement) ? complement.innerHTML= 'Ese complemento no existe en ese año' : '';
+  //   // Muestra el resultado
+  //   if (isWin) {
+  //     showSuccess();
+  //   } else if (totalCounter === 0) {
+  //     for (const eachDice of dices) {
+  //       eachDice.removeEventListener('click', handleDice);
+  //     }
+    
+  //     counter.classList.remove('hidden');
+  //     counter.innerHTML = `Hay demasiadas paradojas temporales, has perdido... corre Marty!!!`;
+  //     gifEnd.classList.remove('hidden');
+  //     gifEnd.src = "./images/Doc1.gif";
+  //   } else {
+  //     counter.innerHTML = `Te quedan ${totalCounter} tiradas`;
+  //   }
+  // };
+  
 
   const win = () => {
     // Define un objeto con las condiciones de cada personaje por año
     const conditions = {
       'Marty': {
-        '1885': { places: [clock, iron], companies: ['Doc', tannen, 'Clara'], complements: [train, horse] },
-        '1985': { places: [clock, house, coffee], companies: ['Doc', 'Biff', 'Jennifer', george], complements: ['Einstein', 'Plutonio', cond, radiation] },
-        '1955': { places: [clock, house, coffee, dance], companies: ['Doc', 'Biff', george], complements: [cond, radiation] },
-        '2015': { places: [clock, hotel, house, coffee], companies: ['Doc', 'Biff', 'Jennifer', george], complements: [cond, radiation, vest, scooter, 'Plutonio'] }
+        '1885': {places: places1885, companies: ['Doc', tannen, 'Clara'], complements: complement1885 },
+        '1985': { places:  places1985, companies: ['Doc', 'Biff', 'Jennifer', george], complements: complement1985},
+        '1955': { places: places1955, companies: ['Doc', 'Biff', george], complements:complement1955 },
+        '2015': { places: places2015, companies: ['Doc', 'Biff', 'Jennifer', george], complements: complement2015 }
       },
       'Doc': {
-        '1885': { places: [clock, iron], companies: ['Clara', tannen], complements: [train, horse] },
-        '1985': { places: [clock, house, coffee], companies: ['Marty', 'Biff', 'Jennifer', george], complements: ['Einstein', 'Plutonio', cond, radiation] },
-        '1955': { places: [clock, house, coffee, dance], companies: ['Biff', george], complements: [cond, radiation] },
-        '2015': { places: [clock, hotel, house, coffee], companies: ['Marty', 'Biff', 'Jennifer', george], complements: [cond, radiation, vest, scooter, 'Plutonio'] }
+        '1885': { places: places1885, companies: ['Clara', tannen], complements: complement1885},
+        '1985': { places: places1985, companies: ['Marty', 'Biff', 'Jennifer', george], complements:complement1985 },
+        '1955': { places: places1955, companies: ['Biff', george], complements: complement1955 },
+        '2015': { places: places2015, companies: ['Marty', 'Biff', 'Jennifer', george], complements: complement2015}
       },
       'Biff': {
-        '1885': { places: [clock, iron], companies: ['Clara', 'Doc', tannen], complements: [train, horse] },
-        '1985': { places: [clock, house, coffee], companies: ['Marty', 'Doc', 'Jennifer', george], complements: ['Einstein', 'Plutonio', cond, radiation] },
-        '1955': { places: [clock, house, coffee, dance], companies: ['Doc', george], complements: [cond, radiation] },
-        '2015': { places: [clock, hotel, house, coffee], companies: ['Marty', 'Doc', 'Jennifer', george], complements: [cond, radiation, vest, scooter, 'Plutonio'] }
+        '1885': { places: places1885, companies: ['Clara', 'Doc', tannen], complements: complement1885 },
+        '1985': { places: places1985, companies: ['Marty', 'Doc', 'Jennifer', george], complements: complement1985 },
+        '1955': { places: places1955, companies: ['Doc', george], complements: complement1955 },
+        '2015': { places: places2015, companies: ['Marty', 'Doc', 'Jennifer', george], complements: complement2015 }
       },
       'Jennifer': {
-        '1885': { places: [clock, iron], companies: ['Clara', 'Doc', tannen], complements: [train, horse] },
-        '1985': { places: [clock, house, coffee], companies: ['Marty', 'Doc', 'Biff', george], complements: ['Einstein', 'Plutonio', cond, radiation] },
-        '1955': { places: [clock, house, coffee, dance], companies: ['Doc', george, 'Biff'], complements: [cond, radiation] },
-        '2015': { places: [clock, hotel, house, coffee], companies: ['Marty', 'Doc', 'Biff', george], complements: [cond, radiation, vest, scooter, 'Plutonio'] }
+        '1885': {places: places1885, companies: ['Clara', 'Doc', tannen], complements: complement1885},
+        '1985': { places:  places1985, companies: ['Marty', 'Doc', 'Biff', george], complements: complement1985 },
+        '1955': { places: places1955, companies: ['Doc', george, 'Biff'], complements: complement1955},
+        '2015': { places: places2015, companies: ['Marty', 'Doc', 'Biff', george], complements: complement2015 }
       }
     };
   
     // Obtén las condiciones del personaje actual
     const characterConditions = conditions[currentCharacter][currentYear];
-  
+  console.log (characterConditions);
     // Verifica si las condiciones actuales coinciden con las condiciones del personaje
     const isWin = characterConditions.places.includes(currentPlace) &&
                   characterConditions.companies.includes(currentCompany) &&
                   characterConditions.complements.includes(currentComplement);
+
+   
+    
+    // // Mensajes de error para cada condición que no se cumpla
+    // const notWinPlace = !characterConditions.places.includes(currentPlace) ? 'Ese lugar no existe en ese año' : '';
+    // const notWinCompany = !characterConditions.companies.includes(currentCompany) ? 'Esa persona no existe ya/aún o eres tú' : '';
+    // const notWinComplements = !characterConditions.complements.includes(currentComplement) ? 'Ese complemento no existe en ese año' : '';
   
     // Muestra el resultado
     if (isWin) {
@@ -564,12 +639,20 @@ const showSuccess = () => {
       for (const eachDice of dices) {
         eachDice.removeEventListener('click', handleDice);
       }
+    
       counter.classList.remove('hidden');
+      if (!characterConditions.places.includes(currentPlace)) {
+        complement.innerHTML = 'Ese lugar no existe en ese año';
+       }
+    
       counter.innerHTML = `Hay demasiadas paradojas temporales, has perdido... corre Marty!!!`;
       gifEnd.classList.remove('hidden');
       gifEnd.src = "./images/Doc1.gif";
     } else {
+      // complement.innerHTML = `${notWinPlace || notWinCompany || notWinComplements}`;
       counter.innerHTML = `Te quedan ${totalCounter} tiradas`;
-    }
+   
+    } 
+    
   };
   
