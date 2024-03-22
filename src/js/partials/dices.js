@@ -12,6 +12,13 @@ const train = 'Tren del tiempo';
 const horse = 'Caballo de Doc';
 const cond = 'Condensador de fluzo';
 const radiation = 'Traje antirradiación';
+const options = {
+  'year': ['1885', '1985', '2015', '1955'],
+  'place': [clock, iron, hotel, dance, house, coffee],
+  'company': ['Marty', 'Doc', 'Biff', 'Jennifer', george, tannen, 'Clara'],
+  'complement': [vest, scooter, train, horse, 'Einstein', 'Plutonio', cond, radiation]
+};
+
 
 const getRandomNumber = () => {
   return Math.floor(Math.random() * 6) + 1;
@@ -51,12 +58,7 @@ const handleDice = (e) => {
   totalCounter--;
 
   const idDice = e.currentTarget.id;
-  const options = {
-    'year': ['1885', '1985', '2015', '1955'],
-    'place': [clock, iron, hotel, dance, house, coffee],
-    'company': ['Marty', 'Doc', 'Biff', 'Jennifer', george, tannen, 'Clara'],
-    'complement': [vest, scooter, train, horse, 'Einstein', 'Plutonio', cond, radiation]
-  };
+ 
 
   const randomIndex = Math.floor(Math.random() * options[idDice].length);
   const selectedOption = options[idDice][randomIndex];
@@ -415,104 +417,159 @@ const showSuccess = () => {
 
 
 
-  const win = () =>{
+  // const win = () =>{
  
       
-    if (totalCounter > 0){
+  //   if (totalCounter > 0){
      
-      counter.innerHTML= `Te quedan ${totalCounter} tiradas`;
+  //     counter.innerHTML= `Te quedan ${totalCounter} tiradas`;
      
-      if (currentCharacter === 'Marty'){
-        if(currentYear === '1885'){
-          if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Herrería de Doc') && (currentCompany === 'Doc' || currentCompany === 'Perro Rabioso Tannen' || currentCompany === 'Clara') && (currentComplement === 'Tren del tiempo' || currentComplement === 'Caballo de Doc')){
+  //     if (currentCharacter === 'Marty'){
+  //       if(currentYear === '1885'){
+  //         if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Herrería de Doc') && (currentCompany === 'Doc' || currentCompany === 'Perro Rabioso Tannen' || currentCompany === 'Clara') && (currentComplement === 'Tren del tiempo' || currentComplement === 'Caballo de Doc')){
            
-            showSuccess()
-          } 
-        } else if (currentYear === '1985') {
-          if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería')   && (currentCompany === 'Doc' || currentCompany === 'Biff' || currentCompany === 'Jennifer' || currentCompany === 'George y Lorraine') && (currentComplement === 'Einstein' || currentComplement === 'Plutonio'|| currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
-            showSuccess()
-          }
-        } else if (currentYear === '1955') {
-          if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería'  || currentPlace === 'Baile del Encantamiento Bajo el Mar')   && (currentCompany === 'Doc' || currentCompany === 'Biff' || currentCompany === 'George y Lorraine') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
-         showSuccess()
-          }
-        } else if (currentYear === '2015') {
-          if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Hotel Biff`s' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería' )   && (currentCompany === 'Doc' || currentCompany === 'Biff' || currentCompany === 'Jennifer' || currentCompany === 'George y Lorraine') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación' || currentComplement === 'Chaleco con autosecado' || currentComplement === 'Patinete volador' || currentComplement === 'Plutonio' || currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
-            showSuccess()
-          }
-        }
-    } else if (currentCharacter === 'Doc'){
-      if(currentYear === '1885'){
-        if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Herrería de Doc') && (currentCompany === 'Clara' || currentCompany === 'Perro Rabioso Tannen') && (currentComplement === 'Tren del tiempo' || currentComplement === 'Caballo de Doc')){
-        showSuccess()
-        } 
-      } else if (currentYear === '1985') {
-        if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería')   && (currentCompany === 'Marty' || currentCompany === 'Biff' || currentCompany === 'Jennifer' || currentCompany === 'George y Lorraine') && (currentComplement === 'Einstein' || currentComplement === 'Plutonio'|| currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
-         showSuccess()
-        }
-      } else if (currentYear === '1955') {
-        if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería' || currentPlace === 'Baile del Encantamiento Bajo el Mar')   && (currentCompany === 'Biff' || currentCompany === 'George y Lorraine') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
-       showSuccess()
-        }
-      } else if (currentYear === '2015') {
-        if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Hotel Biff`s' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería' )   && (currentCompany === 'Marty' || currentCompany === 'Biff' || currentCompany === 'Jennifer' || currentCompany === 'George y Lorraine') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación' || currentComplement === 'Chaleco con autosecado' || currentComplement === 'Patinete volador' || currentComplement === 'Plutonio' || currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
-          showSuccess()
-        }
-      }
+  //           showSuccess()
+  //         } 
+  //       } else if (currentYear === '1985') {
+  //         if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería')   && (currentCompany === 'Doc' || currentCompany === 'Biff' || currentCompany === 'Jennifer' || currentCompany === 'George y Lorraine') && (currentComplement === 'Einstein' || currentComplement === 'Plutonio'|| currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
+  //           showSuccess()
+  //         }
+  //       } else if (currentYear === '1955') {
+  //         if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería'  || currentPlace === 'Baile del Encantamiento Bajo el Mar')   && (currentCompany === 'Doc' || currentCompany === 'Biff' || currentCompany === 'George y Lorraine') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
+  //        showSuccess()
+  //         }
+  //       } else if (currentYear === '2015') {
+  //         if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Hotel Biff`s' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería' )   && (currentCompany === 'Doc' || currentCompany === 'Biff' || currentCompany === 'Jennifer' || currentCompany === 'George y Lorraine') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación' || currentComplement === 'Chaleco con autosecado' || currentComplement === 'Patinete volador' || currentComplement === 'Plutonio' || currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
+  //           showSuccess()
+  //         }
+  //       }
+  //   } else if (currentCharacter === 'Doc'){
+  //     if(currentYear === '1885'){
+  //       if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Herrería de Doc') && (currentCompany === 'Clara' || currentCompany === 'Perro Rabioso Tannen') && (currentComplement === 'Tren del tiempo' || currentComplement === 'Caballo de Doc')){
+  //       showSuccess()
+  //       } 
+  //     } else if (currentYear === '1985') {
+  //       if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería')   && (currentCompany === 'Marty' || currentCompany === 'Biff' || currentCompany === 'Jennifer' || currentCompany === 'George y Lorraine') && (currentComplement === 'Einstein' || currentComplement === 'Plutonio'|| currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
+  //        showSuccess()
+  //       }
+  //     } else if (currentYear === '1955') {
+  //       if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería' || currentPlace === 'Baile del Encantamiento Bajo el Mar')   && (currentCompany === 'Biff' || currentCompany === 'George y Lorraine') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
+  //      showSuccess()
+  //       }
+  //     } else if (currentYear === '2015') {
+  //       if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Hotel Biff`s' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería' )   && (currentCompany === 'Marty' || currentCompany === 'Biff' || currentCompany === 'Jennifer' || currentCompany === 'George y Lorraine') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación' || currentComplement === 'Chaleco con autosecado' || currentComplement === 'Patinete volador' || currentComplement === 'Plutonio' || currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
+  //         showSuccess()
+  //       }
+  //     }
 
-    } else if (currentCharacter === 'Biff') {
+  //   } else if (currentCharacter === 'Biff') {
 
-      if(currentYear === '1885'){
-        if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Herrería de Doc') && (currentCompany === 'Clara' || currentCompany === 'Doc'|| currentCompany === 'Perro Rabioso Tannen') && (currentComplement === 'Tren del tiempo' || currentComplement === 'Caballo de Doc')){
+  //     if(currentYear === '1885'){
+  //       if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Herrería de Doc') && (currentCompany === 'Clara' || currentCompany === 'Doc'|| currentCompany === 'Perro Rabioso Tannen') && (currentComplement === 'Tren del tiempo' || currentComplement === 'Caballo de Doc')){
      
-          showSuccess()
-        } 
-      } else if (currentYear === '1985') {
-        if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería')   && (currentCompany === 'Marty' || currentCompany === 'Doc' || currentCompany === 'Jennifer' || currentCompany === 'George y Lorraine') && (currentComplement === 'Einstein' || currentComplement === 'Plutonio'|| currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
-          showSuccess()
-        }
-      } else if (currentYear === '1955') {
-        if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería' || currentPlace === 'Baile del Encantamiento Bajo el Mar')   && (currentCompany === 'Doc' || currentCompany === 'George y Lorraine') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
-          showSuccess()
-        }
-      } else if (currentYear === '2015') {
-        if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Hotel Biff`s' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería' )   && (currentCompany === 'Marty' || currentCompany === 'Doc' || currentCompany === 'Jennifer' || currentCompany === 'George y Lorraine') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación' || currentComplement === 'Chaleco con autosecado' || currentComplement === 'Patinete volador' || currentComplement === 'Plutonio' || currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
-          showSuccess()
-        }
-      }
-    } else if (currentCharacter === 'Jennifer') {
-      if(currentYear === '1885'){
-        if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Herrería de Doc') && (currentCompany === 'Clara' || currentCompany === 'Doc' || currentCompany === 'Perro Rabioso Tannen') && (currentComplement === 'Tren del tiempo' || currentComplement === 'Caballo de Doc')){
+  //         showSuccess()
+  //       } 
+  //     } else if (currentYear === '1985') {
+  //       if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería')   && (currentCompany === 'Marty' || currentCompany === 'Doc' || currentCompany === 'Jennifer' || currentCompany === 'George y Lorraine') && (currentComplement === 'Einstein' || currentComplement === 'Plutonio'|| currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
+  //         showSuccess()
+  //       }
+  //     } else if (currentYear === '1955') {
+  //       if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería' || currentPlace === 'Baile del Encantamiento Bajo el Mar')   && (currentCompany === 'Doc' || currentCompany === 'George y Lorraine') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
+  //         showSuccess()
+  //       }
+  //     } else if (currentYear === '2015') {
+  //       if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Hotel Biff`s' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería' )   && (currentCompany === 'Marty' || currentCompany === 'Doc' || currentCompany === 'Jennifer' || currentCompany === 'George y Lorraine') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación' || currentComplement === 'Chaleco con autosecado' || currentComplement === 'Patinete volador' || currentComplement === 'Plutonio' || currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
+  //         showSuccess()
+  //       }
+  //     }
+  //   } else if (currentCharacter === 'Jennifer') {
+  //     if(currentYear === '1885'){
+  //       if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Herrería de Doc') && (currentCompany === 'Clara' || currentCompany === 'Doc' || currentCompany === 'Perro Rabioso Tannen') && (currentComplement === 'Tren del tiempo' || currentComplement === 'Caballo de Doc')){
          
-          showSuccess()
-        } 
-      } else if (currentYear === '1985') {
-        if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería')   && (currentCompany === 'Marty' || currentCompany === 'Doc' || currentCompany === 'Biff' || currentCompany === 'George y Lorraine') && (currentComplement === 'Einstein' || currentComplement === 'Plutonio'|| currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
-          showSuccess()
-        }
-      } else if (currentYear === '1955') {
-        if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería' || currentPlace === 'Baile del Encantamiento Bajo el Mar')   && (currentCompany === 'Doc' || currentCompany === 'George y Lorraine' || currentCompany === 'Biff') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
-          showSuccess()
-        }
-      } else if (currentYear === '2015') {
-        if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Hotel Biff`s' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería' )   && (currentCompany === 'Marty' || currentCompany === 'Doc' || currentCompany === 'Biff' || currentCompany === 'George y Lorraine') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación' || currentComplement === 'Chaleco con autosecado' || currentComplement === 'Patinete volador' || currentComplement === 'Plutonio' || currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
-          showSuccess()
-        }
-      }
-    }
+  //         showSuccess()
+  //       } 
+  //     } else if (currentYear === '1985') {
+  //       if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería')   && (currentCompany === 'Marty' || currentCompany === 'Doc' || currentCompany === 'Biff' || currentCompany === 'George y Lorraine') && (currentComplement === 'Einstein' || currentComplement === 'Plutonio'|| currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
+  //         showSuccess()
+  //       }
+  //     } else if (currentYear === '1955') {
+  //       if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería' || currentPlace === 'Baile del Encantamiento Bajo el Mar')   && (currentCompany === 'Doc' || currentCompany === 'George y Lorraine' || currentCompany === 'Biff') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
+  //         showSuccess()
+  //       }
+  //     } else if (currentYear === '2015') {
+  //       if((currentPlace === 'Reloj de la Torre' || currentPlace === 'Hotel Biff`s' || currentPlace === 'Casa de Marty' || currentPlace === 'Cafetería' )   && (currentCompany === 'Marty' || currentCompany === 'Doc' || currentCompany === 'Biff' || currentCompany === 'George y Lorraine') && (currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación' || currentComplement === 'Chaleco con autosecado' || currentComplement === 'Patinete volador' || currentComplement === 'Plutonio' || currentComplement === 'Condensador de fluzo' || currentComplement === 'Traje antirradiación')){
+  //         showSuccess()
+  //       }
+  //     }
+  //   }
    
           
   
-    } else if (totalCounter === 0 ) {
+  //   } else if (totalCounter === 0 ) {
       
+  //     for (const eachDice of dices) {
+  //       eachDice.removeEventListener('click', handleDice);    //revisar esto
+  //     }
+  //     counter.classList.remove('hidden');
+  //     counter.innerHTML= `Hay demasiadas paradojas temporales, has perdido... corre Marty!!!`;
+  //     gifEnd.classList.remove('hidden');
+  //     gifEnd.src = "./images/Doc1.gif";
+      
+  //   }
+   
+  // }
+
+
+  const win = () => {
+    // Define un objeto con las condiciones de cada personaje por año
+    const conditions = {
+      'Marty': {
+        '1885': { places: [clock, iron], companies: ['Doc', tannen, 'Clara'], complements: [train, horse] },
+        '1985': { places: [clock, house, coffee], companies: ['Doc', 'Biff', 'Jennifer', george], complements: ['Einstein', 'Plutonio', cond, radiation] },
+        '1955': { places: [clock, house, coffee, dance], companies: ['Doc', 'Biff', george], complements: [cond, radiation] },
+        '2015': { places: [clock, hotel, house, coffee], companies: ['Doc', 'Biff', 'Jennifer', george], complements: [cond, radiation, vest, scooter, 'Plutonio'] }
+      },
+      'Doc': {
+        '1885': { places: [clock, iron], companies: ['Clara', tannen], complements: [train, horse] },
+        '1985': { places: [clock, house, coffee], companies: ['Marty', 'Biff', 'Jennifer', george], complements: ['Einstein', 'Plutonio', cond, radiation] },
+        '1955': { places: [clock, house, coffee, dance], companies: ['Biff', george], complements: [cond, radiation] },
+        '2015': { places: [clock, hotel, house, coffee], companies: ['Marty', 'Biff', 'Jennifer', george], complements: [cond, radiation, vest, scooter, 'Plutonio'] }
+      },
+      'Biff': {
+        '1885': { places: [clock, iron], companies: ['Clara', 'Doc', tannen], complements: [train, horse] },
+        '1985': { places: [clock, house, coffee], companies: ['Marty', 'Doc', 'Jennifer', george], complements: ['Einstein', 'Plutonio', cond, radiation] },
+        '1955': { places: [clock, house, coffee, dance], companies: ['Doc', george], complements: [cond, radiation] },
+        '2015': { places: [clock, hotel, house, coffee], companies: ['Marty', 'Doc', 'Jennifer', george], complements: [cond, radiation, vest, scooter, 'Plutonio'] }
+      },
+      'Jennifer': {
+        '1885': { places: [clock, iron], companies: ['Clara', 'Doc', tannen], complements: [train, horse] },
+        '1985': { places: [clock, house, coffee], companies: ['Marty', 'Doc', 'Biff', george], complements: ['Einstein', 'Plutonio', cond, radiation] },
+        '1955': { places: [clock, house, coffee, dance], companies: ['Doc', george, 'Biff'], complements: [cond, radiation] },
+        '2015': { places: [clock, hotel, house, coffee], companies: ['Marty', 'Doc', 'Biff', george], complements: [cond, radiation, vest, scooter, 'Plutonio'] }
+      }
+    };
+  
+    // Obtén las condiciones del personaje actual
+    const characterConditions = conditions[currentCharacter][currentYear];
+  
+    // Verifica si las condiciones actuales coinciden con las condiciones del personaje
+    const isWin = characterConditions.places.includes(currentPlace) &&
+                  characterConditions.companies.includes(currentCompany) &&
+                  characterConditions.complements.includes(currentComplement);
+  
+    // Muestra el resultado
+    if (isWin) {
+      showSuccess();
+    } else if (totalCounter === 0) {
       for (const eachDice of dices) {
-        eachDice.removeEventListener('click', handleDice);    //revisar esto
+        eachDice.removeEventListener('click', handleDice);
       }
       counter.classList.remove('hidden');
-      counter.innerHTML= `Hay demasiadas paradojas temporales, has perdido... corre Marty!!!`;
+      counter.innerHTML = `Hay demasiadas paradojas temporales, has perdido... corre Marty!!!`;
       gifEnd.classList.remove('hidden');
       gifEnd.src = "./images/Doc1.gif";
-      
+    } else {
+      counter.innerHTML = `Te quedan ${totalCounter} tiradas`;
     }
-   
-  }
+  };
+  
