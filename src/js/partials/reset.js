@@ -5,24 +5,45 @@ const handleReset = (e) => {
   for (const eachDice of dices) {
     eachDice.addEventListener('click', handleDice);
   }
-  counter.innerHTML = ``;
+  resetCurrent();
   totalCounter = 7;
+  resetResult();
+  final = '';
+  hidden();
+  resetError();
+};
+
+btnReset.addEventListener('click', handleReset);
+
+
+const resetError =()=>{
+  errorPlace.innerHTML = '';
+  errorCompany.innerHTML = '';
+  errorComplement.innerHTML = '';
+}
+
+const hidden =()=>{
+  resultYear.classList.add('hidden');
+  resultPlace.classList.add('hidden');
+  resultCompany.classList.add('hidden');
+  resultComplement.classList.add('hidden');
   gifEnd.classList.add('hidden');
+
+}
+
+const resetCurrent =()=>{
+  counter.innerHTML = '';
   currentCharacter ='';
-  resultCompany.innerHTML= '';
-  resultComplement.innerHTML='';
-  resultYear.innerHTML= '';
-  resultPlace.innerHTML ='';
   currentCompany = '';
   currentComplement = '';
   currentPlace= '';
   currentYear = '';
-  final = '';
-  year.classList.add('hidden');
-  place.classList.add('hidden');
-  company.classList.add('hidden');
-  complement.classList.add('hidden');
-  gifEnd.classList.add('hidden');
-};
+}
 
-btnReset.addEventListener('click', handleReset);
+const resetResult =()=>{
+  resultCompany.innerHTML= '';
+  resultComplement.innerHTML='';
+  resultYear.innerHTML= '';
+  resultPlace.innerHTML ='';  
+
+}

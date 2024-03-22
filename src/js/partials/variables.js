@@ -14,6 +14,9 @@ const complement = document.querySelector('.js-complement');
 const resultComplement = document.querySelector('.js-resultComplement');
 const gifEnd = document.querySelector('.js-end');
 const titleHidden = document.querySelector('.js-title');
+const errorPlace = document.querySelector('.js-errorPlace');
+const errorCompany = document.querySelector('.js-errorCompany');
+const errorComplement = document.querySelector('.js-errorComplement');
 
 
 const btnStart = document.querySelector(".js-startGame");
