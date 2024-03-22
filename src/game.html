@@ -38,13 +38,22 @@
             </h2>
             <div class="characterSection__container">
               <div class="js-traveller characterSection__characters">
+              <div class="characterSection__characters--title">
+                <i class="fa-solid fa-person-half-dress"></i>
                 <h3 class="characterSection__characters--each">Marty</h3>
-
+              </div>
+              <div class="characterSection__characters--title">
+                <i class="fa-solid fa-person-half-dress"></i>
                 <h3 class="characterSection__characters--each">Doc</h3>
-
+              </div>
+              <div class="characterSection__characters--title">
+                <i class="fa-solid fa-person-half-dress"></i>   
                 <h3 class="characterSection__characters--each">Biff</h3>
-
+              </div>
+              <div class="characterSection__characters--title">
+                <i class="fa-solid fa-person-half-dress"></i>
                 <h3 class="characterSection__characters--each">Jennifer</h3>
+              </div>
 
                 <button
                   class="characterSection__characters--btn js-startGame hidden"
@@ -94,14 +103,25 @@
               <p class="js-complement hidden "></p>
             </article>
 
-            <section>
-              <p class="js-errorPlace"></p>
-              <p class="js-errorCompany"></p>
-              <p class="js-errorComplement"></p>
-            </section>
+          
 
           </section>
+      
         </div>
+        <section class="js-errors"> 
+          <div>
+            
+            <p class="js-errorPlace"></p>
+          </div>
+          <div>
+         
+            <p class="js-errorCompany"></p>
+          </div>
+          <div >
+            
+            <p class="js-errorComplement"></p>
+          </div>
+        </section>
         <div class="gameSectionCounter diceSection__counter">
           <div class="diceSection__counter--initial">
             <h2 class="diceSection__counter--initialText">
@@ -123,9 +143,14 @@
             </div>
           </section>
           </div>
-          <div class="diceSection__counter--result">
+          <div class="diceSection__counter--result js-final ">
             <img src="gif final" alt="gif final" class="gif js-end hidden" />
             <p class="js-counter hidden" ></p>
+            <button
+            class="characterSection__characters--btnReset js-resetGame2 hidden"
+          >
+            Volver a empezar
+          </button>
           </div>
         </div>
       </section>

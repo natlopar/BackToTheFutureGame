@@ -78,9 +78,12 @@ const disabled = () => {
 };
 
 const showSuccess = () => {
+  finalShow.classList.add('finalWin');
+  finalShow.classList.add('slide');
   counter.innerHTML = '¡¡¡Has ganado, qué fuerte!!!';
   counter.classList.remove('hidden');
   gifEnd.classList.remove('hidden');
+  btnResetGif.classList.remove('hidden');
   gifEnd.src = './images/200.gif';
   final = 'win';
   disabled();
@@ -197,15 +200,17 @@ const win = () => {
     characterConditions.complements.includes(currentComplement);
 
   if (isWin) {
+    errorContainer.classList.remove('errors');
+    noRender(errorPlace);
+    noRender(errorCompany);
+    noRender(errorComplement);
+
     showSuccess();
   } else if (totalCounter === 0) {
     for (const eachDice of dices) {
       eachDice.removeEventListener('click', handleDice);
     }
-    counter.classList.remove('hidden');
-    counter.innerHTML = `Hay demasiadas paradojas temporales, has perdido... corre Marty!!!`;
-    gifEnd.classList.remove('hidden');
-    gifEnd.src = './images/Doc1.gif';
+    showLose();
   } else {
     counter.innerHTML = `Te quedan ${totalCounter} tiradas`;
 
@@ -216,11 +221,14 @@ const win = () => {
     ) {
       const message = `El lugar "${currentPlace}" no pertenece al año ${currentYear}.`;
       renderError(message, errorPlace);
-    } else if (
+      errorContainer.classList.add('errors');
+    } 
+    
+    else if (
       currentPlace !== '' &&
       characterConditions.places.includes(currentPlace)
     ) {
-      renderError('', errorPlace);
+      noRender(errorPlace);
     }
 
     if (
@@ -229,11 +237,14 @@ const win = () => {
     ) {
       const message = `El personaje "${currentCompany}" no pertenece al año ${currentYear} o eres tú.`;
       renderError(message, errorCompany);
-    } else if (
+      errorContainer.classList.add('errors');
+    } 
+    
+    else if (
       currentCompany !== '' &&
       characterConditions.companies.includes(currentCompany)
     ) {
-      renderError('', errorCompany);
+      noRender(errorCompany);
     }
 
     if (
@@ -242,15 +253,34 @@ const win = () => {
     ) {
       const message = `El complemento "${currentComplement}" no pertenece al año ${currentYear}.`;
       renderError(message, errorComplement);
-    } else if (
+      errorContainer.classList.add('errors');
+    }
+    
+    else if (
       currentComplement !== '' &&
       characterConditions.complements.includes(currentComplement)
     ) {
-      renderError('', errorComplement);
+     noRender(errorComplement);
     }
   }
 };
 
 const renderError = (message, element) => {
-  element.innerHTML = message;
+  element.innerHTML = `<i class='warning fa-solid fa-triangle-exclamation'></i>${message}`
+
 };
+
+const noRender = (element) => {
+  element.innerHTML ='';
+}
+
+const showLose =()=>{
+
+  finalShow.classList.add('finalLose');
+  finalShow.classList.add('slide');
+    counter.classList.remove('hidden');
+    counter.innerHTML = `Hay demasiadas paradojas temporales, has perdido... corre Marty!!!`;
+    gifEnd.classList.remove('hidden');
+    btnResetGif.classList.remove('hidden');
+    gifEnd.src = './images/Doc1.gif';
+}

@@ -17,10 +17,11 @@ const titleHidden = document.querySelector('.js-title');
 const errorPlace = document.querySelector('.js-errorPlace');
 const errorCompany = document.querySelector('.js-errorCompany');
 const errorComplement = document.querySelector('.js-errorComplement');
-
-
+const finalShow = document.querySelector('.js-final');
+const errorContainer = document.querySelector('.js-errors');
 const btnStart = document.querySelector(".js-startGame");
 const btnReset = document.querySelector(".js-resetGame");
+const btnResetGif = document.querySelector('.js-resetGame2')
 const Marty = './images/Marty15.jpeg';
 const Doc =  './images/Doc.jpeg';
 const Biff = './images/biff.jpg';
