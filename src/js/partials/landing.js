@@ -22,11 +22,3 @@ const handleInstructions =()=> {
 
 
 menuText.addEventListener('click', handleInstructions);
-//    const handlePlay =()=>{
-//     play.classList.add('hidden');
- 
-//     titleHidden.classList.add('hidden');
-  
-//   }
-  
-// play.addEventListener('click', handlePlay);

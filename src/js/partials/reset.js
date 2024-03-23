@@ -1,11 +1,12 @@
 const handleReset = (e) => {
+  startDices = false; 
+  for (const eachDice of dices) {
+    eachDice.removeEventListener('click', handleDice);
+  }
+  console.log (startDices);
   e.preventDefault();
   character.src = './images/Delorean.gif';
   traveller.addEventListener('click', handleTraveller);
-  startDices = false; 
-  for (const eachDice of dices) {
-    eachDice.addEventListener('click', handleDice);
-  }
   resetCurrent();
   totalCounter = 7;
   resetResult();

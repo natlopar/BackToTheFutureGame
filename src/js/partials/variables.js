@@ -35,3 +35,42 @@ let currentComplement ='';
 let totalCounter = 7;
 let final = '';
 let startDices = false;
+
+const clock = 'Reloj de la Torre';
+const iron = 'Herrería de Doc';
+const hotel = 'Hotel Biff`s';
+const dance = 'Baile del Encantamiento Bajo el Mar';
+const house = 'Casa de Marty';
+const coffee = 'Cafetería';
+const george = 'George y Lorraine';
+const tannen = 'Perro Rabioso Tannen';
+const vest = 'Chaleco con autosecado';
+const scooter = 'Patinete volador';
+const train = 'Tren del tiempo';
+const horse = 'Caballo de Doc';
+const cond = 'Condensador de fluzo';
+const radiation = 'Traje antirradiación';
+const options = {
+  year: ['1885', '1985', '2015', '1955'],
+  place: [clock, iron, hotel, dance, house, coffee],
+  company: ['Marty', 'Doc', 'Biff', 'Jennifer', george, tannen, 'Clara'],
+  complement: [
+    vest,
+    scooter,
+    train,
+    horse,
+    'Einstein',
+    'Plutonio',
+    cond,
+    radiation,
+  ],
+};
+
+const places1885 = [clock, iron];
+const places1985 = [clock, house, coffee];
+const places1955 = [...places1985, dance];
+const places2015 = [...places1985, hotel];
+const complement1885 = [train, horse];
+const complement1955 = [cond, radiation];
+const complement1985 = [...complement1955, 'Einstein', 'Plutonio'];
+const complement2015 = [...complement1955, 'Plutonio', vest, scooter];

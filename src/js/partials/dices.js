@@ -1,32 +1,4 @@
-const clock = 'Reloj de la Torre';
-const iron = 'Herrería de Doc';
-const hotel = 'Hotel Biff`s';
-const dance = 'Baile del Encantamiento Bajo el Mar';
-const house = 'Casa de Marty';
-const coffee = 'Cafetería';
-const george = 'George y Lorraine';
-const tannen = 'Perro Rabioso Tannen';
-const vest = 'Chaleco con autosecado';
-const scooter = 'Patinete volador';
-const train = 'Tren del tiempo';
-const horse = 'Caballo de Doc';
-const cond = 'Condensador de fluzo';
-const radiation = 'Traje antirradiación';
-const options = {
-  year: ['1885', '1985', '2015', '1955'],
-  place: [clock, iron, hotel, dance, house, coffee],
-  company: ['Marty', 'Doc', 'Biff', 'Jennifer', george, tannen, 'Clara'],
-  complement: [
-    vest,
-    scooter,
-    train,
-    horse,
-    'Einstein',
-    'Plutonio',
-    cond,
-    radiation,
-  ],
-};
+
 
 const getRandomNumber = () => {
   return Math.floor(Math.random() * 6) + 1;
@@ -90,16 +62,7 @@ const showSuccess = () => {
   disabled();
 };
 
-const places1885 = [clock, iron];
-const places1985 = [clock, house, coffee];
-const places1955 = [...places1985, dance];
-const places2015 = [...places1985, hotel];
 
-const complement1885 = [train, horse];
-
-const complement1955 = [cond, radiation];
-const complement1985 = [...complement1955, 'Einstein', 'Plutonio'];
-const complement2015 = [...complement1955, 'Plutonio', vest, scooter];
 
 const win = () => {
   const conditions = {
@@ -214,7 +177,6 @@ const win = () => {
   } else {
     counter.innerHTML = `Te quedan ${totalCounter} tiradas`;
 
-   
     if (
       currentPlace !== '' &&
       !characterConditions.places.includes(currentPlace)
@@ -222,13 +184,12 @@ const win = () => {
       const message = `El lugar "${currentPlace}" no pertenece al año ${currentYear}.`;
       renderError(message, errorPlace);
       errorContainer.classList.add('errors');
-    } 
-    
-    else if (
+    } else if (
       currentPlace !== '' &&
       characterConditions.places.includes(currentPlace)
     ) {
       noRender(errorPlace);
+      errorContainer.classList.remove('errors');
     }
 
     if (
@@ -238,13 +199,12 @@ const win = () => {
       const message = `El personaje "${currentCompany}" no pertenece al año ${currentYear} o es tu personaje (eso destruiría el universo).`;
       renderError(message, errorCompany);
       errorContainer.classList.add('errors');
-    } 
-    
-    else if (
+    } else if (
       currentCompany !== '' &&
       characterConditions.companies.includes(currentCompany)
     ) {
       noRender(errorCompany);
+      errorContainer.classList.remove('errors');
     }
 
     if (
@@ -254,35 +214,30 @@ const win = () => {
       const message = `El complemento "${currentComplement}" no pertenece al año ${currentYear}.`;
       renderError(message, errorComplement);
       errorContainer.classList.add('errors');
-    }
-    
-    else if (
+    } else if (
       currentComplement !== '' &&
       characterConditions.complements.includes(currentComplement)
     ) {
-     noRender(errorComplement); 
+      noRender(errorComplement);
+      errorContainer.classList.remove('errors');
     }
-   
   }
 };
 
 const renderError = (message, element) => {
-  element.innerHTML = `<i class='warning fa-solid fa-triangle-exclamation'></i>${message}`
+  element.innerHTML = `<i class='warning fa-solid fa-triangle-exclamation'></i>${message}`;
 };
 
 const noRender = (element) => {
-  element.innerHTML ='';
-}
+  element.innerHTML = '';
+};
 
-
-
-
-const showLose =()=>{
+const showLose = () => {
   finalShow.classList.add('finalLose');
   finalShow.classList.add('slide');
-    counter.classList.remove('hidden');
-    counter.innerHTML = `Hay demasiadas paradojas temporales, has perdido... corre Marty!!!`;
-    gifEnd.classList.remove('hidden');
-    btnResetGif.classList.remove('hidden');
-    gifEnd.src = './images/Doc1.gif';
-}
+  counter.classList.remove('hidden');
+  counter.innerHTML = `Hay demasiadas paradojas temporales, has perdido... corre Marty!!!`;
+  gifEnd.classList.remove('hidden');
+  btnResetGif.classList.remove('hidden');
+  gifEnd.src = './images/Doc1.gif';
+};
