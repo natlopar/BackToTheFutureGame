@@ -16,7 +16,7 @@
       src="https://kit.fontawesome.com/40a2c402a8.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./assets/main-415f0770.css">
+    <link rel="stylesheet" href="./assets/main-bfda1a21.css">
   </head>
 
   <body class="body">
@@ -29,36 +29,30 @@
       alt="logo Back to the Future"
     />
     </a>
-    <nav class="headerGame__nav ">
-      <p class="headerGame__nav--text js-nav">¿Cómo se juega?</p>
-      <a href="#time" class="headerGame__nav--text">Consulta la línea temporal</a>
+    <nav class="headerGame__nav  tooltip">
+      <p class="headerGame__nav--text tooltiptext js-nav">¿Cómo se juega?</p>
+      <!-- <a href="#time" class="headerGame__nav--text ">Consulta la línea temporal</a> -->
       <img
-        class="headerGame__nav--img bounce-top"
+        class="headerGame__nav--img bounce-top icon"
         src="./images/matrícula.jpg"
         alt=""
       />
-      <ul class="headerGame__nav--hidden js-navText hidden">
-        <li>Elige con quién vas a viajar en el Delorean</li> 
-        <li>Selecciona "Empezar a Jugar"</li>
-        <li>Tira los dados haciendo click en cada uno</li>
+      
+      <ul class="headerGame__nav--hidden js-navText hidden card">
+        <li>Elige con quién vas a viajar en el Delorean.</li> 
+        <li>Selecciona "Empezar a Jugar".</li>
+        <li>Tira los dados haciendo click en cada uno.</li>
         <li>Tienes 7 tiradas en total para intentar que tu combinación de dados durante el viaje en el
-          tiempo no destruya la galaxia</li>
+          tiempo no destruya la galaxia.</li>
         <li>No puedes encontrarte con tu
           otro tú o con alguien que aún no exista, no puede aparecer un complemento incoherente con la fecha ni
-          un lugar que todavía no exista... </li>
+          estar en un lugar que todavía no exista... </li>
         <li>Desafía a la línea temporal!!</li>
       </ul>
     </nav>
   </header>
     <main class="main">
-      <!-- <h1 class="main__title js-title">
-        Elige un personaje e intenta viajar en el tiempo sin crear una paradoja
-        espacio-temporal!!!
-      </h1> -->
-
-      <!-- <a class="main__button js-play" href="./game.html">Jugar</a> -->
-
-      <!-- <img class="hero__img scale-in-center"  src="/images/title2.webp" alt="Imagen De Lorean"> -->
+     
       <section class=" gameSection js-startSection start">
         <div class="gameSectionPlay">
           <section class="characterSection js-hidden">
@@ -67,13 +61,22 @@
             </h2>
             <div class="characterSection__container">
               <div class="js-traveller characterSection__characters">
+              <div class="characterSection__characters--title">
+                <i class="fa-solid fa-person-half-dress"></i>
                 <h3 class="characterSection__characters--each">Marty</h3>
-
+              </div>
+              <div class="characterSection__characters--title">
+                <i class="fa-solid fa-person-half-dress"></i>
                 <h3 class="characterSection__characters--each">Doc</h3>
-
+              </div>
+              <div class="characterSection__characters--title">
+                <i class="fa-solid fa-person-half-dress"></i>   
                 <h3 class="characterSection__characters--each">Biff</h3>
-
+              </div>
+              <div class="characterSection__characters--title">
+                <i class="fa-solid fa-person-half-dress"></i>
                 <h3 class="characterSection__characters--each">Jennifer</h3>
+              </div>
 
                 <button
                   class="characterSection__characters--btn js-startGame hidden"
@@ -97,14 +100,14 @@
               <span class="diceSection__dice--text">Año</span>
 
               <p class="js-resultYear hidden"></p>
-              <p class="js-year diceSection__dice--result  hidden"></p>
+              <p class="js-year  hidden"></p>
             </article>
 
             <article id="place" class="js-dice diceSection__dice">
               <i class="fa-solid fa-dice"> </i>
               <span class="diceSection__dice--text">Lugar</span>
               <p class="js-resultPlace hidden"></p>
-              <p class="js-place diceSection__dice--result hidden"></p>
+              <p class="js-place  hidden"></p>
             </article>
 
             <article id="company" class="js-dice diceSection__dice">
@@ -113,17 +116,35 @@
                 >Personaje al que te vas a encontrar</span
               >
               <p class="js-resultCompany hidden"></p>
-              <p class="js-company diceSection__dice--result  hidden"></p>
+              <p class="js-company hidden"></p>
             </article>
 
             <article id="complement" class="js-dice diceSection__dice">
               <i class="fa-solid fa-dice"> </i>
               <span class="diceSection__dice--text">Complemento</span>
               <p class="js-resultComplement hidden"></p>
-              <p class="js-complement diceSection__dice--result  hidden"></p>
+              <p class="js-complement hidden "></p>
             </article>
+
+          
+
           </section>
+      
         </div>
+        <section class="js-errors"> 
+          <div>
+            
+            <p class="js-errorPlace"></p>
+          </div>
+          <div>
+         
+            <p class="js-errorCompany"></p>
+          </div>
+          <div >
+            
+            <p class="js-errorComplement"></p>
+          </div>
+        </section>
         <div class="gameSectionCounter diceSection__counter">
           <div class="diceSection__counter--initial">
             <h2 class="diceSection__counter--initialText">
@@ -145,9 +166,14 @@
             </div>
           </section>
           </div>
-          <div class="diceSection__counter--result">
+          <div class="diceSection__counter--result js-final ">
             <img src="gif final" alt="gif final" class="gif js-end hidden" />
             <p class="js-counter hidden" ></p>
+            <button
+            class="characterSection__characters--btnReset js-resetGame2 hidden"
+          >
+            Volver a empezar
+          </button>
           </div>
         </div>
       </section>
@@ -160,7 +186,11 @@
       </section>
     </main>
 
-    <footer></footer>
+    <footer class="footer">
+      <p class="footer__text">Natalia López Ariel </p>
+      <a href="https://github.com/natlopar"><i class="fa-brands fa-github-alt footer__icon"></i></a>
+      <p class="footer__text">&copy; 2024</p>
+    </footer>
     <script src="./js/main.js"></script>
   </body>
 </html>
