@@ -2,6 +2,8 @@
 @import 'core/reset';
 
 @import 'layout/headerGame';
+@import 'layout/footer';
+
 
 .body {
   height: 100vh;
@@ -58,16 +60,23 @@
       font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
     &--hidden {
-      position: relative;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      gap: 20px;
+      padding: 20px 30px;
+      text-align: start;
+      top: -50px;
       bottom: 350px;
-      width: 75vw;
+      width: 90vw;
       font-size: 1.5rem;
       z-index: 5;
       font-weight: bold;
       margin-top: 100px;
       background-color: black;
+      height: 400px;
       color: white;
-      padding: 10px;
+      padding: 5px;
       box-shadow: -1px 4px 5px rgba(0, 0, 0, 0.65);
       @media (min-width: 768px) {
         position: absolute;
@@ -225,9 +234,13 @@ margin-right: 5px;
   display: flex;
   flex-direction: column;
   gap: 50px;
-  margin-top: 50px;
+  margin-top: 70px;
   @media (min-width: 768px) {
     flex-direction: row;
+    margin-top: 100px;
+  }
+  @media (min-width: 1020px) {
+    margin-top: 140px;
   }
 }
 
@@ -417,7 +430,7 @@ margin-right: 5px;
     }
     &--initialText {
       font-family: Verdana, Geneva, Tahoma, sans-serif;
-      min-height: 40px;
+     height: 30px;
       font-size: 1.75rem;
       text-align: center;
       color: orangered;
@@ -426,9 +439,7 @@ margin-right: 5px;
       border-radius: 5px;
       padding: 5px;
       text-align: center;
-      @media (min-width: 768px) {
-        height: 30px;
-      }
+    
     }
   }
 }
@@ -440,7 +451,7 @@ margin-right: 5px;
   margin-top: 220px;
   justify-content: center;
   align-items: center;
-  background-color: white;
+ 
   @media (min-width: 768px) {
     margin-top: 50px;
   }
@@ -457,7 +468,7 @@ margin-right: 5px;
   &__btn {
     margin-top: 50px;
     font-size: 5rem;
-    color: #e3491a;
+    color: blue;
     
   }
 }
@@ -547,8 +558,8 @@ margin-right: 5px;
 }
 @keyframes bounce-top {
   0% {
-    -webkit-transform: translateY(-45px);
-    transform: translateY(-45px);
+    -webkit-transform: translateY(-60px);
+    transform: translateY(-60px);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
     opacity: 1;
@@ -590,8 +601,8 @@ margin-right: 5px;
     animation-timing-function: ease-out;
   }
   100% {
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
+    -webkit-transform: translateY(-40px);
+    transform: translateY(-40px);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
     opacity: 1;

@@ -24,8 +24,7 @@ const handleInstructions =()=> {
 menuText.addEventListener('click', handleInstructions);
 //    const handlePlay =()=>{
 //     play.classList.add('hidden');
-//     // startSection.classList.remove('hidden');
-//     // startSection.classList.add('start');
+ 
 //     titleHidden.classList.add('hidden');
   
 //   }

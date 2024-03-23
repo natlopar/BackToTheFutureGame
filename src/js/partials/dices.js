@@ -41,6 +41,7 @@ const resultElementClasses = {
 
 const handleDice = (e) => {
   totalCounter--;
+  counter.classList.remove('hidden');
 
   const idDice = e.currentTarget.id;
 
@@ -204,7 +205,6 @@ const win = () => {
     noRender(errorPlace);
     noRender(errorCompany);
     noRender(errorComplement);
-
     showSuccess();
   } else if (totalCounter === 0) {
     for (const eachDice of dices) {
@@ -235,7 +235,7 @@ const win = () => {
       currentCompany !== '' &&
       !characterConditions.companies.includes(currentCompany)
     ) {
-      const message = `El personaje "${currentCompany}" no pertenece al año ${currentYear} o eres tú.`;
+      const message = `El personaje "${currentCompany}" no pertenece al año ${currentYear} o es tu personaje (eso destruiría el universo).`;
       renderError(message, errorCompany);
       errorContainer.classList.add('errors');
     } 
