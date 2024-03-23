@@ -42,6 +42,7 @@
   &__titleImage {
     height: 150px;
     width: 300px;
+    margin: 30px 20px 20px 20px;
   }
   &__nav {
     padding-top: 50px;
@@ -207,7 +208,7 @@ margin-right: 5px;
   }
   &__button {
     position: absolute;
-    top: 380px;
+    top: 355px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2rem;
     text-decoration: none;
@@ -479,6 +480,13 @@ margin-right: 5px;
   animation: scale-in-center 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
+.scale-in-center1 {
+  -webkit-animation: scale-in-center 2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: scale-in-center1 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+}
+
 @-webkit-keyframes scale-in-center {
   0% {
     -webkit-transform: scale(0);
@@ -501,6 +509,31 @@ margin-right: 5px;
     -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 0.3;
+  }
+}
+
+@-webkit-keyframes scale-in-center1 {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-center1 {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
@@ -601,8 +634,8 @@ margin-right: 5px;
     animation-timing-function: ease-out;
   }
   100% {
-    -webkit-transform: translateY(-40px);
-    transform: translateY(-40px);
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
     opacity: 1;

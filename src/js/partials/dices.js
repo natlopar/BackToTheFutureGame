@@ -260,22 +260,24 @@ const win = () => {
       currentComplement !== '' &&
       characterConditions.complements.includes(currentComplement)
     ) {
-     noRender(errorComplement);
+     noRender(errorComplement); 
     }
+   
   }
 };
 
 const renderError = (message, element) => {
   element.innerHTML = `<i class='warning fa-solid fa-triangle-exclamation'></i>${message}`
-
 };
 
 const noRender = (element) => {
   element.innerHTML ='';
 }
 
-const showLose =()=>{
 
+
+
+const showLose =()=>{
   finalShow.classList.add('finalLose');
   finalShow.classList.add('slide');
     counter.classList.remove('hidden');
