@@ -164,7 +164,7 @@ const win = () => {
     characterConditions.complements.includes(currentComplement);
 
   if (isWin) {
-    errorContainer.classList.remove('errors');
+    // errorContainer.classList.remove('errors');
     noRender(errorPlace);
     noRender(errorCompany);
     noRender(errorComplement);
@@ -183,14 +183,12 @@ const win = () => {
     ) {
       const message = `El lugar "${currentPlace}" no pertenece al año ${currentYear}.`;
       renderError(message, errorPlace);
-      errorContainer.classList.add('errors');
+      // errorContainer.classList.add('errors');
     } else if (
       currentPlace !== '' &&
       characterConditions.places.includes(currentPlace)
     ) {
       noRender(errorPlace);
-      errorContainer.classList.remove('errors');
-    }
 
     if (
       currentCompany !== '' &&
@@ -198,13 +196,13 @@ const win = () => {
     ) {
       const message = `El personaje "${currentCompany}" no pertenece al año ${currentYear} o es tu personaje (eso destruiría el universo).`;
       renderError(message, errorCompany);
-      errorContainer.classList.add('errors');
+      // errorContainer.classList.add('errors');
     } else if (
       currentCompany !== '' &&
       characterConditions.companies.includes(currentCompany)
     ) {
       noRender(errorCompany);
-      errorContainer.classList.remove('errors');
+      
     }
 
     if (
@@ -213,23 +211,29 @@ const win = () => {
     ) {
       const message = `El complemento "${currentComplement}" no pertenece al año ${currentYear}.`;
       renderError(message, errorComplement);
-      errorContainer.classList.add('errors');
+      // errorContainer.classList.add('errors');
     } else if (
       currentComplement !== '' &&
       characterConditions.complements.includes(currentComplement)
     ) {
       noRender(errorComplement);
-      errorContainer.classList.remove('errors');
+      
+      
     }
+  }
   }
 };
 
 const renderError = (message, element) => {
   element.innerHTML = `<i class='warning fa-solid fa-triangle-exclamation'></i>${message}`;
+  element.classList.add('errors');
 };
 
 const noRender = (element) => {
   element.innerHTML = '';
+  element.classList.remove('errors');
+
+
 };
 
 const showLose = () => {

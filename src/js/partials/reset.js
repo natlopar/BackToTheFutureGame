@@ -16,7 +16,7 @@ const handleReset = (e) => {
   finalShow.classList.remove('finalWin');
   finalShow.classList.remove('finalLose');
   finalShow.classList.remove('slide');
-  errorContainer.classList.remove('errors');
+ 
 };
 
 btnReset.addEventListener('click', handleReset);
@@ -26,6 +26,9 @@ const resetError =()=>{
   errorPlace.innerHTML = '';
   errorCompany.innerHTML = '';
   errorComplement.innerHTML = '';
+  errorPlace.classList.remove('errors');
+  errorCompany.classList.remove('errors');
+  errorComplement.classList.remove('errors');
 }
 
 const hidden =()=>{
