@@ -1,4 +1,7 @@
 
+const collapseElementList = document.querySelectorAll('.collapse')
+const collapseList = [...collapseElementList].map(collapseEl => new bootstrap.Collapse(collapseEl))
+
 
 const getRandomNumber = () => {
   return Math.floor(Math.random() * 6) + 1;
