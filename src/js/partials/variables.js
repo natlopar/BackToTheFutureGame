@@ -59,7 +59,7 @@ const options = {
     scooter,
     train,
     horse,
-    'Einstein',
+    'Einstein (perro de Doc)',
     'Plutonio',
     cond,
     radiation,
@@ -72,5 +72,5 @@ const places1955 = [...places1985, dance];
 const places2015 = [...places1985, hotel];
 const complement1885 = [train, horse];
 const complement1955 = [cond, radiation];
-const complement1985 = [...complement1955, 'Einstein', 'Plutonio'];
+const complement1985 = [...complement1955, 'Einstein (perro de Doc)', 'Plutonio'];
 const complement2015 = [...complement1955, 'Plutonio', vest, scooter];
