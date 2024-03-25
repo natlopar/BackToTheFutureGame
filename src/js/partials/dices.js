@@ -164,7 +164,7 @@ const win = () => {
     characterConditions.complements.includes(currentComplement);
 
   if (isWin) {
-    // errorContainer.classList.remove('errors');
+   
     noRender(errorPlace);
     noRender(errorCompany);
     noRender(errorComplement);
@@ -183,12 +183,13 @@ const win = () => {
     ) {
       const message = `El lugar "${currentPlace}" no pertenece al año ${currentYear}.`;
       renderError(message, errorPlace);
-      // errorContainer.classList.add('errors');
+   
     } else if (
       currentPlace !== '' &&
       characterConditions.places.includes(currentPlace)
     ) {
       noRender(errorPlace);
+    }
 
     if (
       currentCompany !== '' &&
@@ -196,7 +197,7 @@ const win = () => {
     ) {
       const message = `El personaje "${currentCompany}" no pertenece al año ${currentYear} o es tu personaje (eso destruiría el universo).`;
       renderError(message, errorCompany);
-      // errorContainer.classList.add('errors');
+   
     } else if (
       currentCompany !== '' &&
       characterConditions.companies.includes(currentCompany)
@@ -211,16 +212,15 @@ const win = () => {
     ) {
       const message = `El complemento "${currentComplement}" no pertenece al año ${currentYear}.`;
       renderError(message, errorComplement);
-      // errorContainer.classList.add('errors');
+    
     } else if (
       currentComplement !== '' &&
       characterConditions.complements.includes(currentComplement)
     ) {
       noRender(errorComplement);
-      
-      
+       
     }
-  }
+  
   }
 };
 
