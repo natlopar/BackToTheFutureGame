@@ -4,7 +4,6 @@
 @import 'layout/headerGame';
 @import 'layout/footer';
 
-
 .body {
   height: 100vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -89,6 +88,7 @@
 }
 
 .finalWin {
+  z-index: 10;
   background-color: white;
   height: 300px;
   display: flex;
@@ -109,6 +109,7 @@
 }
 
 .finalLose {
+  z-index: 10;
   background-color: white;
   height: 250px;
   display: flex;
@@ -121,6 +122,7 @@
   border-radius: 25px;
   border: 2px solid orangered;
   box-shadow: -1px 4px 5px rgba(0, 0, 0, 0.65);
+  margin: 0px 30px;
   @media (min-width: 768px) {
     left: 30%;
     height: 350px;
@@ -128,9 +130,8 @@
   }
 }
 .warning {
-margin-right: 5px;
+  margin-right: 5px;
 }
-
 
 .blob {
   position: absolute;
@@ -261,6 +262,7 @@ margin-right: 5px;
     background-color: white;
     border-radius: 5px;
     padding: 5px;
+    box-shadow: -1px 4px 5px rgba(0, 0, 0, 0.65);
   }
 
   &__container {
@@ -280,7 +282,6 @@ margin-right: 5px;
     }
   }
 
-
   &__characters {
     align-items: flex-start;
     display: flex;
@@ -289,6 +290,15 @@ margin-right: 5px;
     cursor: pointer;
     &--each {
       font-size: 1.7rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 0 20px;
+      padding: 2px;
+      border-radius: 5px;
+      background-color: white;
+      border: 1px solid orangered;
+      box-shadow: -1px 4px 5px rgba(0, 0, 0, 0.65);
+      align-self: center;
       &:hover {
         color: #e3491a;
         transform: scale(1.1);
@@ -299,7 +309,6 @@ margin-right: 5px;
       display: flex;
       i {
         font-size: 1.7rem;
-        margin-right: 20px;
       }
     }
     &--btn {
@@ -316,11 +325,11 @@ margin-right: 5px;
       @media (min-width: 768px) {
         font-size: 2rem;
         height: 65px;
-       }
-       @media (min-width: 1020px) {
+      }
+      @media (min-width: 1020px) {
         font-size: 2rem;
         height: 40px;
-       }
+      }
     }
     &--btnReset {
       cursor: pointer;
@@ -334,7 +343,7 @@ margin-right: 5px;
         background-color: white;
       }
       @media (min-width: 768px) {
-       font-size: 2rem;
+        font-size: 2rem;
       }
     }
   }
@@ -343,7 +352,6 @@ margin-right: 5px;
 .errors {
   margin: 10px;
   display: flex;
-  
   gap: 10px;
   padding: 8px;
   border-radius: 5px;
@@ -351,9 +359,6 @@ margin-right: 5px;
   color: white;
   font-size: 1.5rem;
   list-style: none;
-  
-
-
 }
 .gif {
   width: 250px;
@@ -370,6 +375,12 @@ margin-right: 5px;
       font-weight: bold;
       cursor: pointer;
       margin: 0 20px;
+      padding: 2px;
+      border-radius: 5px;
+      background-color: white;
+      border: 1px solid orangered;
+      box-shadow: -1px 4px 5px rgba(0, 0, 0, 0.65);
+      align-self: center;
       &:hover {
         color: #e3491a;
         transform: scale(1.1);
@@ -409,7 +420,7 @@ margin-right: 5px;
         text-align: center;
         color: #e3491a;
         background-color: white;
-  
+
         border-radius: 25px;
         @media (min-width: 768px) {
           font-size: 2rem;
@@ -431,7 +442,7 @@ margin-right: 5px;
     }
     &--initialText {
       font-family: Verdana, Geneva, Tahoma, sans-serif;
-     height: 30px;
+      height: 60px;
       font-size: 1.75rem;
       text-align: center;
       color: orangered;
@@ -440,7 +451,10 @@ margin-right: 5px;
       border-radius: 5px;
       padding: 5px;
       text-align: center;
-    
+      box-shadow: -1px 4px 5px rgba(0, 0, 0, 0.65);
+      @media (min-width: 768px) {
+        height: 30px;
+      }
     }
   }
 }
@@ -452,7 +466,7 @@ margin-right: 5px;
   margin-top: 220px;
   justify-content: center;
   align-items: center;
- 
+
   @media (min-width: 768px) {
     margin-top: 50px;
   }
@@ -470,8 +484,73 @@ margin-right: 5px;
     margin-top: 50px;
     font-size: 5rem;
     color: blue;
-    
   }
+}
+
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+  z-index: 1;
+  margin-left: 5px;
+  &__btnOff {
+    position: absolute;
+    left: 32px;
+    font-size: 1.5rem;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+  }
+  &__btnOn {
+    font-weight: bolder;
+    position: absolute;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    color: black;
+  }
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle {
+  position: relative;
+  display: flex;
+  width: 4em;
+  height: 1.2em;
+  background-color: rgb(102, 56, 56);
+  color: rgb(232, 223, 223);
+  justify-content: center;
+}
+
+.toggle::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 0.8em;
+  height: 2.5em;
+  margin-bottom: 0.5em;
+  bottom: 0;
+  background-color: orangered;
+  box-shadow: 0 -1em 0 0 rgb(12, 1, 1);
+  transform-origin: bottom;
+  transform: rotateZ(-30deg);
+  transition: transform 150ms;
+}
+
+.switch input:checked + .toggle::before {
+  transform: rotateZ(30deg);
+}
+
+.switch input:checked + .toggle {
+  box-shadow: 1em 1em 2em 0 rgb(203, 84, 84);
 }
 
 .scale-in-center {
@@ -484,7 +563,6 @@ margin-right: 5px;
   -webkit-animation: scale-in-center 2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
     both;
   animation: scale-in-center1 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-
 }
 
 @-webkit-keyframes scale-in-center {

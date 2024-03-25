@@ -1,9 +1,9 @@
 const handleReset = (e) => {
-  startDices = false; 
+  startDices = false;
   for (const eachDice of dices) {
     eachDice.removeEventListener('click', handleDice);
   }
-  console.log (startDices);
+  console.log(startDices);
   e.preventDefault();
   character.src = './images/Delorean.gif';
   traveller.addEventListener('click', handleTraveller);
@@ -16,22 +16,20 @@ const handleReset = (e) => {
   finalShow.classList.remove('finalWin');
   finalShow.classList.remove('finalLose');
   finalShow.classList.remove('slide');
- 
 };
 
 btnReset.addEventListener('click', handleReset);
 
-
-const resetError =()=>{
+const resetError = () => {
   errorPlace.innerHTML = '';
   errorCompany.innerHTML = '';
   errorComplement.innerHTML = '';
   errorPlace.classList.remove('errors');
   errorCompany.classList.remove('errors');
   errorComplement.classList.remove('errors');
-}
+};
 
-const hidden =()=>{
+const hidden = () => {
   resultYear.classList.add('hidden');
   resultPlace.classList.add('hidden');
   resultCompany.classList.add('hidden');
@@ -39,25 +37,23 @@ const hidden =()=>{
   gifEnd.classList.add('hidden');
   counter.classList.add('hidden');
   btnResetGif.classList.add('hidden');
-}
+};
 
-const resetCurrent =()=>{
+const resetCurrent = () => {
   counter.innerHTML = '';
 
-  currentCharacter ='';
+  currentCharacter = '';
   currentCompany = '';
   currentComplement = '';
-  currentPlace= '';
+  currentPlace = '';
   currentYear = '';
-}
+};
 
-const resetResult =()=>{
-  resultCompany.innerHTML= '';
-  resultComplement.innerHTML='';
-  resultYear.innerHTML= '';
-  resultPlace.innerHTML ='';  
-
-}
-
+const resetResult = () => {
+  resultCompany.innerHTML = '';
+  resultComplement.innerHTML = '';
+  resultYear.innerHTML = '';
+  resultPlace.innerHTML = '';
+};
 
 btnResetGif.addEventListener('click', handleReset);

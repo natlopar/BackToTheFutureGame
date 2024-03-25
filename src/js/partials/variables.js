@@ -1,5 +1,3 @@
-
-
 const dices = document.querySelectorAll('.js-dice');
 const counter = document.querySelector('.js-counter');
 const traveller = document.querySelector('.js-traveller');
@@ -19,19 +17,19 @@ const errorCompany = document.querySelector('.js-errorCompany');
 const errorComplement = document.querySelector('.js-errorComplement');
 const finalShow = document.querySelector('.js-final');
 const errorContainer = document.querySelector('.js-errors');
-const btnStart = document.querySelector(".js-startGame");
+const btnStart = document.querySelector('.js-startGame');
 
-const btnReset = document.querySelector(".js-resetGame");
-const btnResetGif = document.querySelector('.js-resetGame2')
+const btnReset = document.querySelector('.js-resetGame');
+const btnResetGif = document.querySelector('.js-resetGame2');
 const Marty = './images/Marty15.jpeg';
-const Doc =  './images/Doc.jpeg';
+const Doc = './images/Doc.jpeg';
 const Biff = './images/biff.jpg';
 const Jennifer = './images/Jennifer_Parker.webp';
 let currentYear = '';
 let currentCharacter = '';
-let currentPlace ='';
-let currentCompany ='';
-let currentComplement ='';
+let currentPlace = '';
+let currentCompany = '';
+let currentComplement = '';
 let totalCounter = 7;
 let final = '';
 let startDices = false;
@@ -72,5 +70,14 @@ const places1955 = [...places1985, dance];
 const places2015 = [...places1985, hotel];
 const complement1885 = [train, horse];
 const complement1955 = [cond, radiation];
-const complement1985 = [...complement1955, 'Einstein (perro de Doc)', 'Plutonio'];
+const complement1985 = [
+  ...complement1955,
+  'Einstein (perro de Doc)',
+  'Plutonio',
+];
 const complement2015 = [...complement1955, 'Plutonio', vest, scooter];
+
+let key = false;
+const keyOn = document.querySelector('.js-keyOn');
+const keyOff = document.querySelector('.js-keyOff');
+const toggle = document.querySelector('.js-checkbox');

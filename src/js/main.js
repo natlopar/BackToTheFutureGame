@@ -5,7 +5,7 @@ import './partials/variables.js';
 import './partials/characters.js';
 import './partials/dices.js';
 import './partials/reset.js';
-
+import './partials/toggle.js';
 
 
 

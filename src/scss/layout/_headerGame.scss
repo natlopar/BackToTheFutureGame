@@ -87,8 +87,7 @@
         text-align: start;
         width: 90vw;
         font-size: 1.8rem;
-       
-        list-style:disc;
+        list-style: none;
         background-color: black;
         color: white;
         margin-right:10px;
@@ -104,70 +103,7 @@
     }
   }
 
-  /* The switch - the box around the slider */
-.switch {
-  font-size: 17px;
-  position: relative;
-  display: inline-block;
-  width: 3.5em;
-  height: 2em;
-  
-}
 
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-  
-}
-
-// .checkbox{
-//   z-index: 2;
-// }
-
-.toggle {
-  position: relative;
-  display: flex;
-  width: 4em;
-  height: 1.2em;
-  background-color: rgb(102, 56, 56);
-  color: rgb(232, 223, 223);
-  justify-content: center;
-
-  
- 
-}
-
-.toggle::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: .8em;
-  height: 2.5em;
-  margin-bottom: .5em;
-  bottom: 0;
-  background-color: rgb(248, 7, 7);
-  box-shadow: 0 -1em 0 0 rgb(12, 1, 1);
-  transform-origin: bottom;
-  transform: rotateZ(-30deg);
-  transition: transform 150ms;
-}
-
-.switch input:checked + .toggle::before {
-  transform: rotateZ(30deg);
-
-}
-
-.switch input:checked + .toggle {
-  box-shadow: 0 -1em 2em 0 rgb(230, 111, 111);
-  
-}     
-
-
-  .close {
-    list-style: none;
-  }  
   .tooltip {
 
     display: inline-block;

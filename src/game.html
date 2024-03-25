@@ -22,8 +22,7 @@
     <section class="backSection scale-in-center"></section>
     <load src="./partials/headerGame.html" />
     <main class="main">
-     
-      <section class=" gameSection js-startSection start">
+      <section class="gameSection js-startSection start">
         <div class="gameSectionPlay">
           <section class="characterSection js-hidden">
             <h2 class="characterSection__title">
@@ -31,22 +30,22 @@
             </h2>
             <div class="characterSection__container">
               <div class="js-traveller characterSection__characters">
-              <div class="characterSection__characters--title">
-                <i class="fa-solid fa-person-half-dress"></i>
-                <h3 class="characterSection__characters--each">Marty</h3>
-              </div>
-              <div class="characterSection__characters--title">
-                <i class="fa-solid fa-person-half-dress"></i>
-                <h3 class="characterSection__characters--each">Doc</h3>
-              </div>
-              <div class="characterSection__characters--title">
-                <i class="fa-solid fa-person-half-dress"></i>   
-                <h3 class="characterSection__characters--each">Biff</h3>
-              </div>
-              <div class="characterSection__characters--title">
-                <i class="fa-solid fa-person-half-dress"></i>
-                <h3 class="characterSection__characters--each">Jennifer</h3>
-              </div>
+                <div class="characterSection__characters--title">
+                  <i class="fa-solid fa-person-half-dress"></i>
+                  <h3 class="characterSection__characters--each">Marty</h3>
+                </div>
+                <div class="characterSection__characters--title">
+                  <i class="fa-solid fa-person-half-dress"></i>
+                  <h3 class="characterSection__characters--each">Doc</h3>
+                </div>
+                <div class="characterSection__characters--title">
+                  <i class="fa-solid fa-person-half-dress"></i>
+                  <h3 class="characterSection__characters--each">Biff</h3>
+                </div>
+                <div class="characterSection__characters--title">
+                  <i class="fa-solid fa-person-half-dress"></i>
+                  <h3 class="characterSection__characters--each">Jennifer</h3>
+                </div>
 
                 <button
                   class="characterSection__characters--btn js-startGame hidden"
@@ -56,12 +55,17 @@
               </div>
               <img
                 src=""
-                alt="Imagen personaje elegido"
+                alt=""
                 class="js-character characterSection__img hidden"
               />
             </div>
           </section>
-
+          <label class="switch">
+            <span class="switch__btnOff js-keyOff">OFF</span>
+            <span class="switch__btnOn js-keyOn hidden">ON</span>
+            <input type="checkbox" class="checkbox js-checkbox" />
+            <span class="toggle js-toggle">Pistas </span>
+          </label>
           <section class="diceSection js-hidden">
             <h2 class="diceSection__title">2. ¡Ahora tira los dados!</h2>
 
@@ -70,14 +74,14 @@
               <span class="diceSection__dice--text">Año</span>
 
               <p class="js-resultYear hidden"></p>
-              <p class="js-year  hidden"></p>
+              <p class="js-year hidden"></p>
             </article>
 
             <article id="place" class="js-dice diceSection__dice">
               <i class="fa-solid fa-dice"> </i>
               <span class="diceSection__dice--text">Lugar</span>
               <p class="js-resultPlace hidden"></p>
-              <p class="js-place  hidden"></p>
+              <p class="js-place hidden"></p>
             </article>
 
             <article id="company" class="js-dice diceSection__dice">
@@ -93,25 +97,18 @@
               <i class="fa-solid fa-dice"> </i>
               <span class="diceSection__dice--text">Complemento</span>
               <p class="js-resultComplement hidden"></p>
-              <p class="js-complement hidden "></p>
+              <p class="js-complement hidden"></p>
             </article>
-
-          
-
           </section>
-      
         </div>
-        <section class="js-errors"> 
+        <section class="js-errors">
           <div>
-            
             <p class="js-errorPlace"></p>
           </div>
           <div>
-         
             <p class="js-errorCompany"></p>
           </div>
-          <div >
-            
+          <div>
             <p class="js-errorComplement"></p>
           </div>
         </section>
@@ -121,44 +118,50 @@
               3. Contador de tiradas
             </h2>
             <button
-            class="characterSection__characters--btnReset js-resetGame hidden"
-          >
-            Volver a empezar
-          </button>
+              class="characterSection__characters--btnReset js-resetGame hidden"
+            >
+              Volver a empezar
+            </button>
             <section>
-            <div>
-              <img
-                class="diceSection__counter--initialImg"
-                src="/images/condensador.jpg"
-                alt=""
-              />
-            
-            </div>
-          </section>
+              <div>
+                <img
+                  class="diceSection__counter--initialImg"
+                  src="/images/condensador.jpg"
+                  alt=""
+                />
+              </div>
+            </section>
           </div>
-          <div class="diceSection__counter--result js-final ">
+          <div class="diceSection__counter--result js-final">
             <img src="gif final" alt="gif final" class="gif js-end hidden" />
-            <p class="js-counter hidden" ></p>
+            <p class="js-counter hidden"></p>
             <button
-            class="characterSection__characters--btnReset js-resetGame2 hidden"
-          >
-            Volver a empezar
-          </button>
+              class="characterSection__characters--btnReset js-resetGame2 hidden"
+            >
+              Volver a empezar
+            </button>
           </div>
         </div>
       </section>
       <section class="timeline">
-        <a href="#header" class="timeline__btn"><i class="fa-solid fa-circle-arrow-up"></i></a>
-        <figure id="time" >
-          <img src="/images/BTTFTimelines.png" class="timeline__img" alt="imagen linea temporal">
+        <a href="#header" class="timeline__btn"
+          ><i class="fa-solid fa-circle-arrow-up"></i
+        ></a>
+        <figure id="time">
+          <img
+            src="/images/BTTFTimelines.png"
+            class="timeline__img"
+            alt="imagen linea temporal"
+          />
         </figure>
-    
       </section>
     </main>
 
     <footer class="footer">
-      <p class="footer__text">Natalia López Ariel </p>
-      <a href="https://github.com/natlopar"><i class="fa-brands fa-github-alt footer__icon"></i></a>
+      <p class="footer__text">Natalia López Ariel</p>
+      <a href="https://github.com/natlopar"
+        ><i class="fa-brands fa-github-alt footer__icon"></i
+      ></a>
       <p class="footer__text">&copy; 2024</p>
     </footer>
     <script src="./js/main.js"></script>

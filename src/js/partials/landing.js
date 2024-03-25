@@ -7,7 +7,6 @@ const startSection =document.querySelector('.js-startSection');
 
 const handleMenu =()=>{
     menuText.classList.toggle('hidden'); 
-    // titleHidden.classList.add('hidden');
     for (const hidden of hiddenPart){
      hidden.classList.toggle('hidden');
     }
