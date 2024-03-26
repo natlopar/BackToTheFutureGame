@@ -267,7 +267,7 @@
 
   &__container {
     display: flex;
-    gap: 50px;
+   
   }
   &__img {
     filter: drop-shadow(-1px 4px 5px rgba(0, 0, 0, 0.65));
@@ -495,7 +495,7 @@
   width: 3.5em;
   height: 2em;
   z-index: 1;
-  margin-left: 5px;
+ 
   &__btnOff {
     position: absolute;
     left: 32px;
