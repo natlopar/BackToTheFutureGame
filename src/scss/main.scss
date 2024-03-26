@@ -487,7 +487,7 @@
   }
 }
 
-/* The switch - the box around the slider */
+
 .switch {
   font-size: 17px;
   position: relative;
@@ -495,6 +495,7 @@
   width: 3.5em;
   height: 2em;
   z-index: 1;
+  cursor: pointer;
  
   &__btnOff {
     position: absolute;
@@ -513,7 +514,7 @@
   }
 }
 
-/* Hide default HTML checkbox */
+
 .switch input {
   opacity: 0;
   width: 0;
