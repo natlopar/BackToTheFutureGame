@@ -81,3 +81,103 @@ let key = false;
 const keyOn = document.querySelector('.js-keyOn');
 const keyOff = document.querySelector('.js-keyOff');
 const toggle = document.querySelector('.js-checkbox');
+
+
+const conditions = {
+  Marty: {
+    1885: {
+      places: places1885,
+      companies: ['Doc', tannen, 'Clara'],
+      complements: complement1885,
+    },
+    1985: {
+      places: places1985,
+      companies: ['Doc', 'Biff', 'Jennifer', george],
+      complements: complement1985,
+    },
+    1955: {
+      places: places1955,
+      companies: ['Doc', 'Biff', george],
+      complements: complement1955,
+    },
+    2015: {
+      places: places2015,
+      companies: ['Doc', 'Biff', 'Jennifer', george],
+      complements: complement2015,
+    },
+  },
+  Doc: {
+    1885: {
+      places: places1885,
+      companies: ['Clara', tannen],
+      complements: complement1885,
+    },
+    1985: {
+      places: places1985,
+      companies: ['Marty', 'Biff', 'Jennifer', george],
+      complements: complement1985,
+    },
+    1955: {
+      places: places1955,
+      companies: ['Biff', george],
+      complements: complement1955,
+    },
+    2015: {
+      places: places2015,
+      companies: ['Marty', 'Biff', 'Jennifer', george],
+      complements: complement2015,
+    },
+  },
+  Biff: {
+    1885: {
+      places: places1885,
+      companies: ['Clara', 'Doc', tannen],
+      complements: complement1885,
+    },
+    1985: {
+      places: places1985,
+      companies: ['Marty', 'Doc', 'Jennifer', george],
+      complements: complement1985,
+    },
+    1955: {
+      places: places1955,
+      companies: ['Doc', george],
+      complements: complement1955,
+    },
+    2015: {
+      places: places2015,
+      companies: ['Marty', 'Doc', 'Jennifer', george],
+      complements: complement2015,
+    },
+  },
+  Jennifer: {
+    1885: {
+      places: places1885,
+      companies: ['Clara', 'Doc', tannen],
+      complements: complement1885,
+    },
+    1985: {
+      places: places1985,
+      companies: ['Marty', 'Doc', 'Biff', george],
+      complements: complement1985,
+    },
+    1955: {
+      places: places1955,
+      companies: ['Doc', george, 'Biff'],
+      complements: complement1955,
+    },
+    2015: {
+      places: places2015,
+      companies: ['Marty', 'Doc', 'Biff', george],
+      complements: complement2015,
+    },
+  },
+};
+
+
+const resultElementClasses = {
+  year: '.js-resultYear',
+  place: '.js-resultPlace',
+  company: '.js-resultCompany',
+  complement: '.js-resultComplement',
+};

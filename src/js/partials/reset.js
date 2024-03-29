@@ -3,7 +3,6 @@ const handleReset = (e) => {
   for (const eachDice of dices) {
     eachDice.removeEventListener('click', handleDice);
   }
-  console.log(startDices);
   e.preventDefault();
   character.src = './images/Delorean.gif';
   traveller.addEventListener('click', handleTraveller);
