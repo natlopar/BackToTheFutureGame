@@ -2,7 +2,6 @@ const getRandomNumber = () => {
   return Math.floor(Math.random() * 6) + 1;
 };
 
-
 const renderError = (message, element) => {
   element.innerHTML = `<i class='warning fa-solid fa-triangle-exclamation'></i>${message}`;
   element.classList.add('errors');
@@ -142,3 +141,5 @@ const showSuccess = () => {
   disabled();
 };
 
+
+module.exports = {getRandomNumber};
